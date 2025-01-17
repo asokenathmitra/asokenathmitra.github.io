@@ -26,13 +26,13 @@
             <div class="dropdown">
                 <div class="dropbtn">Schedule ▾</div>
                 <div class="dropdown-content">
-                    <a href="./schedule">Day 1</a>
-                    <a href="./schedule">Day 2</a>
-                    <a href="./lecture">Ed Witten's Lecture</a>
+                    <a href="./schedule.html">Day 1</a>
+                    <a href="./schedule.html">Day 2</a>
+                    <a href="./WittenLecture.html">Ed Witten's Lecture</a>
                 </div>
             </div>
-            <a href="./attendees" class="nav-item">Attendees</a>
-            <a href="./register"> <button class="register-btn">Register</button></a>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
         </div>
     </nav>
 
@@ -42,11 +42,16 @@
     action="https://script.google.com/macros/s/AKfycbw5Z1HwkgvZKqJhPE9Wt40DJmTdRwwfZhjxkvCvQ2GGysAfHHwURctSVieWevfguJzdIA/exec">
    
     <h1>A. N. Mitra Lecture Series Registration</h1>
-    <center><h3>(Lecture by Prof. Edward Witten)</h3></center>
-    <br><br>
+    <!-- <center><h3>(Lecture by Prof. Edward Witten)</h3></center> -->
+    <!-- <br><br> -->
     
     <div class="form-group">
         <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email *</label>
         <input type="text" id="name" name="name" required>
     </div>
 
