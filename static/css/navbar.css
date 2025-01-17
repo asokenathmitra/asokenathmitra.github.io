@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Lora";
+    src: url("../fonts/Lora/static/Lora-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Krub";
+    src: url("../fonts/Krub/Krub-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --min-font-size-px: 15px;
+    --vw-to-px: calc(22/1.15);
+    --min-font-size-vw: calc(1.15*15/22);
+    --secondary-color: #95A3B9;
+    --tertiary-color: #F4F4F4;
+}
+
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+/*  overscroll-behavior: none;*/
+}
+
+/* Navbar */
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: 60px;
+        justify-content: space-between;
+        align-items: center;
+/*        vertical-align: middle;*/
+        padding: 0px 1.67vw;
+        background: #1C091D; /*#95A3B9*/
+        /*background-image: url("/static/images/blackboardbg3.jpg");*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        box-shadow: 0 0.1vw 0.21vw rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.67vw;
+    }
+
+    .nav-item {
+        display: flex;
+        min-height: 60px;
+        text-decoration: none;
+        align-items: center;
+        color: white;
+        font-family: "Krub"; 
+        font-size: max(1vw, var(--min-font-size-px));
+/*        font-size: max(1.15vw, var(--min-font-size-px));*/
+        font-weight: normal;
+        margin: auto;
+        padding: 0px 1.67vw;
+/*        padding: 0.83vw 1.67vw;*/
+    }
+
+    .nav-item:hover {
+        text-decoration: none;
+        background-color: #ddd;
+        color: black;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.83vw;
+        padding: 0 1.67vw;
+        align-items: center;
+        font-weight: normal;
+    }
+
+    .register-btn {
+        min-height: 40px;
+        background: #ccc;
+/*        max-height: 55px;*/
+        color: black;
+        border: none;
+        padding: auto max(2.5vw, 10px);
+/*        padding: 0.83vw 1.67vw;*/
+        margin: 0.2vw 1.67vw;
+        cursor: pointer;
+        align-items: center;
+        border-radius: max(1.57vw, calc(calc(var(--vw-to-px)*1.57)*var(--min-font-size-px)/22));
+/*        border-radius: 1.57vw;*/
+        font-family: "Krub";
+        font-size: max(1vw, calc(calc(var(--vw-to-px)*1)*var(--min-font-size-px)/22));
+        /*margin: 0.5rem 0rem;
+        /*margin-right: 20px;*/
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        font-family: "Krub";
+        font-size: max(1vw, calc(calc(var(--vw-to-px)*1.15)*var(--min-font-size-px)/22));
+/*        font-size: 1.15vw;*/
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        text-align: center;
+        background-color: #333;
+        /*min-width: 160px;*/
+        z-index: 1;
+        right: 0;
+        font-family: "Krub";
+        font-size: max(0.84vw, calc(calc(var(--vw-to-px)*0.84)*var(--min-font-size-px)/22));
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.63vw 1.67vw;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn {
+        padding: 0.84vw 1.67vw;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+

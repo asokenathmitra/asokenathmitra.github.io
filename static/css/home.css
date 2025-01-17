@@ -1,0 +1,461 @@
+body {
+    margin: auto;
+/*    margin-top: 60px;*/
+/*    display: flex;*/
+}
+
+.bg-color-layer {
+    position: fixed; 
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A0A0A0; /* #624664; /* #554156*/
+    opacity: 0.88;
+    z-index: -10; 
+    margin: 0vw;
+    padding: 0vw;
+}
+
+
+.background {
+    position: fixed; /* Ensures it stays behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 8.36vw;
+    background-image: url("../images/bgFinal.jpg");\
+    opacity: 1;
+/*    background-repeat: no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -100; /* Places it behind other content */
+}
+
+
+/* Hero text */
+    .biggerContainer {
+/*        z-index: 1;*/
+        background-image: url("../images/anmitrahome1.png");
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        margin: auto;
+        /*height: 40vw;*/ /*80vh*/
+        display: flex;
+/*        flex-wrap: wrap;*/
+    }
+
+    #fillerbox {
+        width: 40%;
+        height: auto;
+    }
+
+    .hero {
+        display: flex;
+        /*height: 30vw;*/ /*80vh*/
+        /*background-color: #554156;*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.04vw 1.04vw; 
+        margin: 3.14vw 5.23vw;
+        color: black;
+/*        flex-direction: column;*/
+/*        flex-wrap: wrap;*/
+    }
+
+    .anmitra {
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .witten {
+        border-radius: 1.04vw; 
+        background-color: rgba(00, 60, 60, 1); /*29, 29, 29, 0.5  85, 65, 86, 1*/
+        /*background: transparent;*/
+        padding-top: 3.14vw;
+        padding-bottom: 3.14vw;
+        padding-right: 2.61vw;
+        display: flex;
+    }
+
+    .hero-text { 
+        width: 50%;
+        max-width: 50%;
+        text-align: left;
+        padding-left: 2.61vw;
+        padding-right: 1.31vw;
+
+        /*align-items: right;*/
+        /*align-content: right;*/
+    }
+
+    .hero-text h1 {
+        font-size: max(3.6vw, 24px); /*56*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 1.04vw;
+        padding-bottom: 1.31vw;
+    }
+
+    .hero-text p {
+        /*margin-bottom: 20px;*/
+        font-family: "Krub";
+        font-size: max(1.15vw, 16px);
+        /*text-align: right;*/
+    }
+
+    .hero-text .buttons {
+        display: flex;
+        gap: 0.78vw;
+        border-color: black;
+        border-width: 0.26vw;
+        justify-content: flex-start;
+    }
+
+    .hero-text .buttons a {
+        text-decoration: none;
+        padding: 5% 10%;
+        border-radius: 30px;
+        /*padding: 0.52vw 1.04vw;
+        border-radius: 1.57vw;*/
+        font-family: "Krub";
+        font-size: max(1.36vw, 12px);
+        font-weight: normal;
+    }
+
+    #learn-more-lec-button {
+        order: 3;
+        width: 50%;
+        align-items: center;
+        padding: 0.52vw 1.04vw;
+        border-radius: 1.57vw;
+    }
+
+    /*.hero-text a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    .hero-text .in-text-link a:hover {
+        border-radius: 5px;
+        background-color: #dddddd;
+        padding: 2px 5px;
+    }*/
+
+    .hero-text .buttons .type1 {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .hero-text .buttons .type2 {
+        background-color: #f8f9fa;
+        border: 0.052vw solid #ddd;
+        color: #333;
+    }
+
+    .hero-image {
+        /*max-width: 40%;*/ /*40*/
+        padding: 1.31vw;
+        padding-left: 0vw;
+        padding-right: 2.61vw;
+    }
+
+    .hero-image img {
+        width: 35vw;
+        border-radius: 26.14vw; /*30px*/
+        background-image: radial-gradient(circle 50vw at 50% 100%, #a0a0a0, #a0a0a0);
+        /*background-image: radial-gradient(circle closest-side, #a0a0a0, #a0a0a0);*/
+        /*border: 1px solid #333;*/
+        /*box-shadow: 0px 0px 5rem #ab9b82, inset 0px 0px 5rem #ab9b82;*/
+        opacity: 0.75;
+    }
+
+    #date-event {
+        font-size: max(1.8vw, 20px); 
+        font-family: Lora; 
+        color: white;
+        display: inline-flex;
+    }
+
+    #about-anmseries {
+        font-size: max(1vw, 14px);
+    }
+
+    #about-lecture {
+        color: #d0d0d0;
+        font-size: max(1vw, 14px);
+    }
+
+    #about-lecture a {
+        text-decoration: none;
+        color: #ff3864;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    #about-lecture a:hover {
+        border-radius: 5px;
+/*        background-color: #ff3864;*/
+        color: yellow;
+/*        font-size: max(0.9vw, 12px);;*/
+        padding: 2px;
+/*        margin-bottom: 5px;*/
+    }
+
+    #anmitra-lecture-title {
+        font-size: max(2.61vw, 28px);
+    }
+
+    /* Professor Mitra */
+        .circle {
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+        .circle img {
+            width: 40vw;
+            border-radius: 50%;
+            display: block;
+            border:0.05vw solid #A0A0A0;
+        }
+
+    /* Professor Witten */
+        .circleWitten {
+            /*border-radius: 100%;*/
+            display: inline-block;
+            position: relative;
+        }
+        .circleWitten img {
+/*            min-width: 400px;*/
+            width: 30vw;
+            border-radius: 1%;
+            margin-left: 0.52vw;
+            /*display: block;*/
+            /*border:1px solid #A0A0A0;*/
+        }
+    
+    #inside {
+        display: none;
+    }
+
+
+/* Join Section and Footer - Page 3 */
+    .page-three {
+/*        min-height: 100vh;*/
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+    }
+
+    .join-section {
+        padding: 3.35vw 1.67vw;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .join-buttons {
+        margin-top: 1.67vw;
+        display: flex;
+        justify-content: center;
+        gap: 0.83vw;
+    }
+
+    .share-btn {
+        background: transparent;
+        border: 0.05vw solid #000;
+        color: #000;
+        padding: 0.42vw 0.83vw;
+        cursor: pointer;
+        border-radius: 0.21vw;
+    }
+
+/* Footer */
+    footer {
+        background: transparent;
+        padding: 1.67vw 0rem 0rem 0rem;
+    }
+
+    .footer-links {
+        display: grid
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.67vw;
+    }
+
+    .link-column h4 {
+        margin-bottom: 0.84vw;
+    }
+
+    .link-column a {
+        display: block;
+        color: #666;
+        text-decoration: none;
+        margin-bottom: 0.42vw;
+    }
+
+    .footer-bottom {
+        background: #2c2c2c;
+        margin-top: 3rem;
+        padding: 1vw 0.84vw;
+        border-top: 0.052vw solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        color: #aaa;
+        font-size: max(1vw, 10px);
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.67vw;
+    }
+
+    .footer-bottom-links a {
+        padding: 0.vw 1.67vw 0rem 0rem;
+        color: #aaa;
+        text-decoration: none;
+    }
+
+/* Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+/* Responsiveness*/
+    @media (max-width: 768px) {
+        * {
+            text-align: center;
+            font-size: 10px;
+            font-family: Krub;
+        }
+
+        body {
+            margin-top: 60px;
+        }
+
+        .hero {
+            width: auto;
+/*            margin: auto;*/
+            height: 760px;
+            padding: 10px;
+/*            height: auto;*/
+            flex-direction: column;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .biggerContainer {
+    /*        z-index: 1;*/
+            width: 80%;
+            background-image: none;
+/*            opacity: 1;*/
+/*            background-repeat: no-repeat;*/
+/*            background-size: 100% auto;*/
+    /*        height: 100%;*/
+/*            display: flex;*/
+            flex-direction: column;
+/*            flex-wrap: wrap;*/
+            align-items: center;
+        }
+
+        #fillerbox {
+/*            width: 50%;*/
+            background-image: url("../images/anmitra2.png");
+            background-size: cover;
+            border-radius: 50%;
+            width: 100%;
+            aspect-ratio: 1;
+        }
+
+        .hero-text .buttons {
+            align-items: self-start;
+            gap: 35px;
+            margin: auto;
+        }
+
+        #date-event {
+            width: 100%;
+        }
+
+        .hero-text {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+            padding: 0;
+/*            display: flex;*/
+/*            flex-direction: column;*/
+/*            flex-wrap: wrap;*/
+            align-items: center;
+        }
+
+        #about-anmseries {
+            text-align: justify;
+        }
+
+        #about-lecture {
+            text-align: justify;
+            width: 85%;
+            margin: 20px auto;
+            order: 2;
+        }
+
+        .hero-image {
+            max-width: 100%;
+        }
+
+        .circleWitten {
+            order: 1;
+        }
+
+        #learn-more-lec-button {
+            order: 3;
+            width: 50%;
+            align-items: center;
+        }
+
+        .circleWitten img {
+/*            min-width: 400px;*/
+            width: 90%;
+            border-radius: 1%;
+            margin: 20px auto;
+/*            margin-left: 0.52vw;*/
+            /*display: block;*/
+            /*border:1px solid #A0A0A0;*/
+        }
+
+        .footer-bottom p {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #outside {
+            display: none;
+        }
+
+        #inside {
+            display: flex;
+        }
+
+    }

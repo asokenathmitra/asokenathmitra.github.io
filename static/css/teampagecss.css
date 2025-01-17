@@ -1,0 +1,257 @@
+/* Team Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    padding-top: 80px; /* 80 Account for fixed navbar */
+}
+
+/* Page Sections */
+.page-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.register-btn {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Header Styles */
+.team-header {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Team Member Card */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.member-image.placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.role {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 24px;
+    height: 24px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    text-indent: -9999px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #ddd;
+}
+
+/* Hiring Section */
+.hiring-section {
+    text-align: left;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.hiring-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hiring-section p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.open-positions-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.open-positions-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .team-header {
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-container {
+        padding: 2rem 1rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .member-image.placeholder {
+        width: 200px;
+        margin: 0 auto 1rem;
+    }
+
+    .team-member {
+        text-align: center;
+        align-items: center;
+    }
+}

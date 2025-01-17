@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.hero {
+  background: #555;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero-buttons {
+  margin-top: 1rem;
+}
+
+.features {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.card-image {
+  height: 150px;
+  background: #ddd;
+  margin-bottom: 1rem;
+}
+
+.join {
+  background: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.newsletter-form button {
+  padding: 0.5rem 1rem;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-terms a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}

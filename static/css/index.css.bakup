@@ -1,0 +1,261 @@
+body {
+    margin: 0px;
+}
+
+.bg-color-layer {
+    position: fixed; 
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A0A0A0; /* #624664; /* #554156*/
+    opacity: 0.88;
+    z-index: -10; 
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.background {
+    position: fixed; /* Ensures it stays behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 10rem;
+    background-image: url("../images/bgFinal.jpg");\
+    opacity: 1;
+/*    background-repeat: no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -100; /* Places it behind other content */
+}
+
+
+/* Hero text */
+    .hero {
+        display: flex;
+        /*background-color: #554156;*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px; 
+        margin: 60px 100px;
+        color: black;
+    }
+
+    .hero-text {
+        max-width: 50%;
+        text-align: left;
+        padding-left: 50px;
+        padding-right: 25px;
+        /*align-items: right;*/
+        /*align-content: right;*/
+    }
+
+    .hero-text h1 {
+        font-size: 72px; /*56*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+    .hero-text p {
+        /*margin-bottom: 20px;*/
+        font-family: "Krub";
+        font-size: 22px;
+        /*text-align: right;*/
+    }
+
+    .hero-text .buttons {
+        display: flex;
+        gap: 15px;
+        border-color: black;
+        border-width: 5px;
+        justify-content: flex-start;
+    }
+
+    .hero-text .buttons a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-family: "Krub";
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    .hero-text .buttons .type1 {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .hero-text .buttons .type2 {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        color: #333;
+    }
+
+    .hero-image {
+        /*max-width: 40%;*/ /*40*/
+        padding: 25px;
+        padding-left: 0px;
+        padding-right: 50px;
+    }
+
+    .hero-image img {
+        width: 35vw;
+        border-radius: 500px; /*30px*/
+        background-image: radial-gradient(circle 50vh at 50% 100%, #a0a0a0, #a0a0a0);
+        /*background-image: radial-gradient(circle closest-side, #a0a0a0, #a0a0a0);*/
+        /*border: 1px solid #333;*/
+        /*box-shadow: 0px 0px 5rem #ab9b82, inset 0px 0px 5rem #ab9b82;*/
+        opacity: 0.75;
+    }
+
+    /* Professor Mitra */
+        .circle {
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+        .circle img {
+            width: 40vw;
+            border-radius: 50%;
+            display: block;
+            border:1px solid #A0A0A0;
+        }
+        /*.circle:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center,
+                rgba(171,171,171,0) 60%,
+                rgba(171,171,171,0.95) 70%,
+                rgba(170,170,170,1) 100% 
+            );
+            border-radius: 50%;
+            position: absolute;
+            top: 0; left: 0;
+        }*/
+
+    /* Professor Witten */
+        .circleWitten {
+            /*border-radius: 100%;*/
+            display: inline-block;
+            position: relative;
+        }
+        .circleWitten img {
+            width: 30vw;
+            border-radius: 1%;
+            margin-left: 10px;
+            /*display: block;*/
+            /*border:1px solid #A0A0A0;*/
+        }
+    
+
+
+
+/* Join Section and Footer - Page 3 */
+    .page-three {
+/*        min-height: 100vh;*/
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+    }
+
+    .join-section {
+        padding: 4rem 2rem;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .join-buttons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .share-btn {
+        background: transparent;
+        border: 1px solid #000;
+        color: #000;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+/* Footer */
+    footer {
+        background: transparent;
+        padding: 2rem 0rem 0rem 0rem;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .link-column h4 {
+        margin-bottom: 1rem;
+    }
+
+    .link-column a {
+        display: block;
+        color: #666;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-bottom {
+        background: #2c2c2c;
+/*        margin-top: 3rem;*/
+        padding: 1rem 1rem 0rem 1rem;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        color: #aaa;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .footer-bottom-links a {
+        padding: 0.6rem 2rem 0rem 0rem;
+        color: #aaa;
+        text-decoration: none;
+    }
+
+/* Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+/* Responsiveness*/
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            max-width: 100%;
+        }
+    }

@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Background */
+body {
+  background: linear-gradient(135deg, #8B54CB, #554156);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* Success Container */
+.success-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Card Style */
+.card {
+  background: #ffffff;
+  color: #333;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Icon */
+.icon {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 50px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark {
+  font-weight: bold;
+}
+
+/* Headline */
+.card h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+/* Description */
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #6a11cb;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #2575fc;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
