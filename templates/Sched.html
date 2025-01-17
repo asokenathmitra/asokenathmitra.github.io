@@ -1,0 +1,355 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule - A. N. Mitra Memorial Lecture Series</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .register-btn {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Collapsible */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        /* Schedule Container */
+        .schedule-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            padding-top: 80px; /* 80 Account for fixed navbar */
+        }
+
+        /* Schedule Section */
+        .schedule-section {
+            margin-bottom: 4rem;
+        }
+
+        .schedule-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #000;
+        }
+
+        .date {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        .session {
+            font-size: 1.5rem;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .time-range {
+            font-size: 1.5rem;
+            font-weight: normal;
+            text-align: right;
+        }
+
+        /* Schedule Grid */
+        .schedule-grid {
+            padding: 0rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .schedule-item {
+            padding: 1em 1rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 1rem;
+            vertical-align: top;
+        }
+
+        .schedule-item:hover {
+            background-color: #aaa;
+        }
+
+        .speaker {
+            font-weight: normal;
+        }
+
+        .topic {
+            text-align: left;
+        }
+
+        .time {
+            text-align: right;
+            color: #333;
+        }
+
+        /* Navigation Arrows */
+        .arrow-btn {
+            background-color: #f0f0f0;
+            color: black;
+            border: none;
+            padding: 0px;
+            cursor: pointer;
+            border-radius: 50%;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            transition: background-color 0.3s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+            font-size: 1.5rem;
+        }
+
+        /* Left Arrow */
+        .arrow-btn-left {
+            left: 10px;
+            font-family: "Arial", sans-serif;
+            font-weight: bold;
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        /* Right Arrow */
+        .arrow-btn-right {
+            right: 10px;
+            font-family: "Arial", sans-serif;
+            font-weight: bold;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        /* Disabled Button */
+        .arrow-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Hover Effects */
+        .arrow-btn:hover:not(:disabled) {
+            background-color: #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .schedule-header,
+            .schedule-item {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 0.5rem;
+            }
+
+            .time-range,
+            .time {
+                text-align: left;
+            }
+
+            .schedule-header {
+                margin-bottom: 1.5rem;
+            }
+
+            .schedule-item {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .schedule-container {
+                padding: 0 1rem;
+            }
+
+            .date,
+            .session,
+            .time-range {
+                font-size: 1.2rem;
+            }
+
+            .schedule-section {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/about" class="nav-item">About</a>
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="/schedule">Day 1</a>
+                    <a href="/schedule">Day 2</a>
+                    <a href="/schedule">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="/teaminfo" class="nav-item">Team</a>
+        </div>
+        <div class="nav-right">
+            <a href="/register"> <button class="register-btn">Register</button></a>
+            <div class="dropdown">
+                <div class="dropbtn"> &nbsp&nbsp▾&nbsp&nbsp </div>
+                <div class="dropdown-content">
+                    <a href="/attendees">Attendees</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    e
+
+    <script>
+        var currentSchedule = 1;
+        var totalSchedules = 6;
+
+        function showSchedule(direction) {
+            document.getElementById('schedule' + currentSchedule).style.display = 'none';
+            
+            if (direction === 'next') {
+                currentSchedule = (currentSchedule % totalSchedules) + 1;
+            } else {
+                currentSchedule = (currentSchedule - 1) || totalSchedules;
+            }
+
+            document.getElementById('schedule' + currentSchedule).style.display = 'block';
+            toggleButtons();
+        }
+
+        function toggleButtons() {
+            document.getElementById('prevBtn').disabled = currentSchedule === 1;
+            document.getElementById('nextBtn').disabled = currentSchedule === totalSchedules;
+        }
+
+        toggleButtons();  // Initialize button state on page load
+
+        // Collapsible Section
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

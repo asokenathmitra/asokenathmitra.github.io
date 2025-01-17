@@ -1,0 +1,126 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A. N. Mitra Memorial Lecture Series</title>
+  <link rel="stylesheet" href="../static/css/navbar.css">
+  <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <div class="bg-color-layer"></div>
+    <div class="background"></div>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="./home.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">About</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html">Day 1</a>
+                    <a href="./schedule.html">Day 2</a>
+                    <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <div style="padding-top: 60px;"></div>
+
+    <div class="hero anmitra">
+        <!-- <div class="hero-image"> -->
+            <!-- <img src="{% static 'images/anmitra2.png' %}" alt="Prof. A. N. Mitra"> -->
+            <!-- <img src="/anmitra.png"  -->
+        <!-- </div> -->
+        <!-- <div class="circle">
+            <img src="{% static 'images/anmitra.png' %}" alt="Prof. A. N. Mitra">
+        </div> -->
+        <div class="biggerContainer">
+            <!-- <div style="width: 40vw;">
+                <img src="{% static 'images/anmitra.png' %}" alt="Prof. A. N. Mitra">
+            </div> -->
+
+            <div id="fillerbox">
+                <!-- &nbsp; -->
+            </div>
+
+            <div class="hero-text">
+                <div style="height: 4vw; aspect-ratio: 1;"></div>
+                <h1>A. N. Mitra Memorial Meeting and Lecture</h1>
+                <div style="height: 1.5vw;"></div>
+
+                <p id="about-anmseries">In the loving memory of and as a tribute to the life and work of Prof. Asoke Nath Mitra, we are organizing this meeting and the second memorial lecture. Prof. Mitra's contributions to the field of High Energy and Nuclear Physics are recognised widely around the world and have inspired many generations of physicists.</p>
+
+                <div style="height: 3.5vw;"></div>
+                <!-- <p id="date-event">April 14-15, 2025</p> -->
+                <p id="date-event">April 14<sup>th</sup>-15<sup>th</sup>, 2025</p>
+                <div style="width: 10vw;; display: inline-flex;"></div>
+                <div class="buttons" style="display: inline-flex; justify-content: space-between; align-content: right;">
+                    <a href="./schedule.html" class="type2">Meeting</a>
+                    <a href="./WittenLecture.html" class="type2">Lecture</a>
+                </div>
+                <div style="height: 2vw;"></div>
+            </div>
+        </div>
+
+            
+    </div>
+
+    <!-- To ensure proper gap between the above and below containers -->
+    <div> &nbsp;</div> 
+
+
+    <div class="hero witten">
+        <div class="hero-text" style="color: white; vertical-align: top;">
+            <h1> 2<sup>nd</sup> A. N. Mitra Memorial Lecture</h1>
+
+            <p id="about-lecture">This memorial lecture will be delivered by Professor Edward Witten on the topic "A Background - Independent Algebra For Gravity". This is the second A. N. Mitra memorial lecture. The <a href="https://www.youtube.com/watch?v=4kn6BwdyA14">inaugural memorial lecture</a> was given by Prof. N. Panchapakesan on Apr 17, 2023, and was organized by the department of Physics, University of Delhi.</p>
+
+            <div class="buttons" id="learn-more-lec-button">
+                <a href="./lecture" style="margin-top: 3vw;" class="type2">Learn More</a>
+                <!-- <a href="/lecture" class="type1">Lecture</a> -->
+            </div>
+
+            <div class="circleWitten" id="inside">
+                <a href="./WittenLecture.html" title="Designed by Gayatri Misra"><img src="../static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
+            </div>
+        </div>
+        <div class="circleWitten" id="outside">
+            <a href="./WittenLecture.html" title="Designed by Gayatri Misra"><img src="../static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
+        </div>
+    </div>
+
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray, Rajnish and Shivam">In the loving memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="mailto:aalok.misra@ph.iitr.ac.in" style="color: cyan;"> aalok.misra@ph.iitr.ac.in</a>.</p>
+                <!-- <div class="footer-bottom-links">
+                    <a href="templates/about.html">About</a>
+                    <a href="templates/schedule.html">Events</a>
+                    <a href="templates/attendees.html">Attendees</a>
+                    <a href="templates/regForm.html">Register</a>
+                </div> -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

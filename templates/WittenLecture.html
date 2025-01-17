@@ -1,0 +1,120 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Lecture</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/WittenLecture.css">
+</head>
+<body>
+    <!-- Loading animation -->
+    <div id="loading">
+        <img src="../static/gifs/3bodyAnim.gif" alt="Loadidfsng...">
+    </div>
+
+    <div class="background the-page"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html">Day 1</a>
+                    <a href="./schedule.html">Day 2</a>
+                    <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+
+    <!-- <section class="the-page content container"> -->
+        <!-- <h2>Prof. A. N. Mitra Memorial Lecture</h2>
+        <p>We are honored to organize a memorial lecture on the birth anniversary of Prof. A. N. Mitra, a distinguished physicist known for his significant contributions to the field of theoretical physics.</p> -->
+        <!-- <h2>Professor Asoke Nath Mitra</h2>
+        <pre style="font-size: 1rem;">(15 April 1929 - 26 November 2022)</pre>
+        <p>Professor Asoke Nath Mitra was a renowned physicist whose work has left a lasting impact on the scientific community. His research in theoretical physics has paved the way for many advancements in the field.</p>
+
+        <p>Asoke Nath Mitra was born on 15 April 1929, in Rajshahi, now in Bangladesh, to Jatindra Nath and Rama Rani Mitra. He married Anjali Mitra (née Ghosh) in November 1956. His father, Jatindra Nath Mitra, taught mathematics in Ramjas College, Delhi University. Mitra too went to Ramjas College to study mathematics, obtaining his bachelor's degree in 1947 and M.A. in 1949. He started his work in physics in 1949, as a Ph.D. student working with R. C. Majumdar.</p>
+
+        <p>After his Ph.D., Mitra went to Cornell University, where he completed a second Ph.D., working with Freeman Dyson and Hans Bethe. Mitra returned to India in 1955, and was appointed Reader at Aligarh Muslim University. He moved to Delhi University as professor in 1963, where he remained until his superannuation in 1994. Mitra was head of the Department of Physics and Astrophysics during 1973–75, but stepped down without completing his three-year term. He held visiting appointments at Indiana University (1962–63) and at the University of Illinois at Chicago (1986–87). He held the prestigious chair of INSA: INSA-Albert Einstein Research Professor during 1989–94 at the University of Delhi. He was a life-time emeritus professor of the university of Delhi at its department of physics and astrophysics. He has produced many PhD's who now occupy leading academic positions.</p>
+    </section> -->
+
+
+    <div class="hero">
+        <div class="Witten" style="background: transparent;">
+            <img src="../static/images/EdWitten.jpg" alt="Professor Edward Witten">
+            
+            <!-- horizontal line with red color -->
+            <hr style="width: 100%; margin-top: 10px; margin-bottom: 10px; border: 1px solid #fb4e2f;">
+
+            <h4 style="color: white;">Date & Time</h4>
+            <p style="color: white;">15<sup>th</sup> April 2025, 6:30 PM IST</p>
+
+        </div>
+        <div class="hero-text" style="color: white;">
+            <h3 style="color: #fff;">A background - Independent Algebra For Gravity</h3>
+            <pre style="margin-top: -20px; font-size: 20px;">Edward Witten</pre>
+
+            <!-- horizontal line with red color -->
+            <hr style="width: 100%; margin-top: 10px; margin-bottom: 10px; border: 1px solid #fb4e2f;">
+
+            <h4>About the speaker</h4>
+            <!-- in about 500 words -->
+            <p>Edward Witten is a theoretical physicist and mathematician who is known for his work in string theory and quantum field theory. He is a professor at the Institute for Advanced Study in Princeton, New Jersey, and has made significant contributions to the fields of theoretical physics and mathematics. Witten is a recipient of numerous awards, including the Fields Medal and the Fundamental Physics Prize. His work has had a profound impact on the development of modern physics and has inspired generations of researchers.</p>
+
+            <h4>Abstract</h4>
+            <p>In this lecture, I will discuss recent progress in the development of a background-independent formulation of algebraic gravity. This approach is based on the idea of using algebraic structures to describe the geometry of spacetime without reference to a fixed background metric. I will explain how this framework can be used to study the dynamics of gravitational fields and the structure of spacetime at the quantum level. I will also discuss the implications of this work for our understanding of the nature of gravity and the fundamental structure of the universe.</p>
+
+            <!-- <h4>Date & Time</h4>
+            <p>15<sup>th</sup> April 2025, 6:30 PM IST</p> -->
+            
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            // Wait for 500ms before hiding the loading animation
+            setTimeout(function () {
+                // Hide the loading animation
+                document.getElementById('loading').style.display = 'none';
+
+                // Show the main content
+                const elements = document.getElementsByClassName('the-page');
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.display = 'block';
+                }
+                // document.getElementsByClassName('the-page').style.display = 'none';
+                document.querySelector('nav').style.display = 'flex';
+            }, 500); // 500ms delay
+        });
+
+        // // script.js
+        // window.addEventListener('load', function() {
+        //     // Hide the loading animation
+        //     document.getElementById('loading').style.display = 'none';
+
+        //     // Show the main content
+        //     document.getElementById('content').style.display = 'block';
+        // });
+    </script>
+
+</body>
+</html>

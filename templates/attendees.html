@@ -1,0 +1,214 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Lecture Series Attendees</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/attendees.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html">Day 1</a>
+                    <a href="./schedule.html">Day 2</a>
+                    <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="atom-animation">
+            <div class="nucleus"></div>
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+        </div>
+
+        <header>
+            <h1>Registered Participants</h1>
+            
+            <div class="search-filter-container">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by name...">
+                    <button class="search-btn">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="filter-section">
+                    <label>Filter by Role:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" id=allbutton data-role="all">All</button>
+                        <button class="filter-btn" id=studentsbutton data-role="student">Students</button>
+                        <button class="filter-btn" id=facultybutton data-role="faculty">Faculty</button>
+                        <button class="filter-btn" id=postdocbutton data-role="postdoc">Postdocs</button>
+                        <button class="filter-btn" id=othersbutton data-role="other">Others</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Participants</h3>
+                    <p id="totalCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Students</h3>
+                    <p id="studentCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Faculty</h3>
+                    <p id="facultyCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Postdocs</h3>
+                    <p id="postdocCount">0</p>
+                </div>
+            </div>
+
+            <div class="participants-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Institute</th>
+                            <!-- <th>Domain</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="participantsTableBody">
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Fetch and populate table from Google Sheets
+        async function loadParticipants() {
+            const spreadsheetId = '1Mj9umsd-U_GgM2eeA1lodPRG999AkykiiPhRxODz-_0';
+            const rangeName = 'A2:G'; // Adjust the range to match your data
+            const apiKey = 'AIzaSyBBJrEbbMahFEH_7tb5qVCMxWcxGSTxLg4'; // Replace with your actual API key
+            const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeName}?key=${apiKey}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                console.log('Data loaded:', data);
+
+                if (!data.values) {
+                    console.error('No data found.');
+                    return;
+                }
+
+                const tableBody = document.getElementById('participantsTableBody');
+                tableBody.innerHTML = ''; // Clear existing rows
+
+                data.values.forEach(row => {
+                    const [date, name, email, position, institute, source, comments] = row;
+                    const participantRole = position ? position.toLowerCase() : 'other';
+
+                    const tr = document.createElement('tr');
+                    tr.setAttribute('data-role', participantRole);
+
+                    tr.innerHTML = `
+                        <td>${name || 'Unknown'}</td>
+                        <td>${position || 'Unknown'}</td>
+                        <td>${institute || 'Unknown'}</td>
+                    `;
+
+                        // <td>${domain || 'Not Specified'}</td>
+
+                    tableBody.appendChild(tr);
+                });
+
+                updateStats();
+            } catch (err) {
+                console.error('Error loading participants:', err);
+            }
+        }
+
+        // Update statistics
+        function updateStats() {
+            const rows = document.querySelectorAll('#participantsTableBody tr');
+            const stats = {
+                total: rows.length,
+                student: 0,
+                faculty: 0,
+                postdoc: 0,
+                other: 0,
+            };
+
+            rows.forEach(row => {
+                const role = row.getAttribute('data-role');
+                if (stats.hasOwnProperty(role)) {
+                    stats[role]++;
+                } else {
+                    stats.other++;
+                }
+            });
+
+            document.getElementById('totalCount').textContent = stats.total;
+            document.getElementById('studentCount').textContent = stats.student;
+            document.getElementById('facultyCount').textContent = stats.faculty;
+            document.getElementById('postdocCount').textContent = stats.postdoc;
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#participantsTableBody tr');
+
+            rows.forEach(row => {
+                const name = row.querySelector('td').textContent.toLowerCase();
+                row.style.display = name.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const role = this.getAttribute('data-role');
+                const rows = document.querySelectorAll('#participantsTableBody tr');
+
+                rows.forEach(row => {
+                    row.style.display = role === 'all' || row.getAttribute('data-role') === role ? '' : 'none';
+                });
+            });
+        });
+
+        // Initialize the application
+        loadParticipants();
+
+    </script>
+</body>
+</html>

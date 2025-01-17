@@ -1,0 +1,137 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Lecture Series Registration</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/regForm.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">About</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html">Day 1</a>
+                    <a href="./schedule.html">Day 2</a>
+                    <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="atom-animation">
+            <div class="nucleus"></div>
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+        </div>
+        
+        <form 
+            id="registrationForm" 
+            method="post" 
+            action="https://script.google.com/macros/s/AKfycbw5Z1HwkgvZKqJhPE9Wt40DJmTdRwwfZhjxkvCvQ2GGysAfHHwURctSVieWevfguJzdIA/exec"
+            >
+            <!-- action="{% url 'register' %}" -->
+            <!-- {% csrf_token %} -->
+           
+            <h1>A. N. Mitra Lecture Series Registration</h1>
+            <center><h3>(Lecture by Prof. Edward Witten)</h3></center>
+            <br><br>
+            
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position *</label>
+                <select id="position" name="position" required>
+                    <option value="">Select Position</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="postdoc">Postdoc</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" id="otherPosition" name="otherPosition" 
+                       placeholder="Please specify" class="other-input hidden">
+            </div>
+
+            <div class="form-group">
+                <label for="institute">Institute *</label>
+                <input type="text" id="institute" name="institute" required>
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="domain">Domain</label>
+                <select id="domain" name="domain">
+                    <option value="">Select Domain</option>
+                    <option value="physics">Physics</option>
+                    <option value="maths">Mathematics</option>
+                    <option value="nothing">Nothing Specific</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" id="otherDomain" name="otherDomain" 
+                       placeholder="Please specify" class="other-input hidden">
+            </div> -->
+
+            <div class="form-group">
+                <label for="source">How did you come to know about the lecture series?</label>
+                <select id="source" name="source">
+                    <option value="">Select Source</option>
+                    <option value="teachers">Teachers</option>
+                    <option value="friends">Friends</option>
+                    <option value="institute">Institute</option>
+                    <option value="social">Social Media</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" id="otherSource" name="otherSource" 
+                       placeholder="Please specify" class="other-input hidden">
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments/Suggestions</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+            <a href="/"> <button class="back-to-home-btn">Back to home</button> </a>
+        </form>
+    </div>
+
+    <script>
+        // Show/hide "Other" input fields based on selection
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                const otherId = 'other' + this.id.charAt(0).toUpperCase() + this.id.slice(1);
+                const otherInput = document.getElementById(otherId);
+                if (otherInput) {
+                    otherInput.classList.toggle('hidden', this.value !== 'other');
+                    if (this.value === 'other') {
+                        otherInput.required = true;
+                    } else {
+                        otherInput.required = false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
