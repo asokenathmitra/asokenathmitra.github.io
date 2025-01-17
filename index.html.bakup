@@ -1,0 +1,113 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. N. Mitra Memorial Lecture Series</title>
+    <link rel="stylesheet" href="./static/css/navbar.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+    
+    <div class="bg-color-layer"></div>
+    <div class="background"></div>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="./index.html" class="nav-item">Home</a>
+            <a href="./templates/about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./templates/schedule.html">Day 1</a>
+                    <a href="./templates/schedule.html">Day 2</a>
+                    <a href="./templates/WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./templates/attendees.html" class="nav-item">Attendees</a>
+            <a href="./templates/regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <div style="padding-top: 60px;"></div>
+
+    <div class="hero">
+        <!-- <div class="hero-image"> -->
+            <!-- <img src="{% static 'images/anmitra2.png' %}" alt="Prof. A. N. Mitra"> -->
+            <!-- <img src="/anmitra.png"  -->
+        <!-- </div> -->
+        <div class="circle">
+            <img src="static/images/anmitra2.png" alt="Prof. A. N. Mitra">
+        </div>
+        <div class="hero-text">
+            <h1>A. N. Mitra Memorial Meeting and Lecture</h1>
+            <p style="font-size: 26px;">In the loving memory of Prof. A. N. Mitra, we are holding this memorial meeting and lecture. This online lecture is a tribute to the life and work of late professor A. N. Mitra. His contributions to the field of High Energy and Nuclear Physics are recognised widely around the world and he has inspired many to do the same!</p>
+            <p style="font-size: 40px; font-family: Lora;">April 14<sup>th</sup>-15<sup>th</sup>, 2025</p>
+            <div class="buttons">
+                <a href="./templates/schedule.html" class="type1">Meeting</a>
+                <a href="./templates/WittenLecture.html" class="type1">Lecture</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- To ensure proper gap between the above and below containers -->
+    <div> &nbsp;</div> 
+
+    <div class="hero" style="
+        border-radius: 20px; 
+        background-color: rgba(40, 40, 40, 1); /*29, 29, 29, 0.5  85, 65, 86, 1*/
+        /*background: transparent;*/
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-right: 50px;
+        ">
+        <div class="hero-text" style="color: white; vertical-align: top;">
+            <h1 style="font-size: 50px;"> 2<sup>nd</sup> A. N. Mitra Memorial Lecture</h1>
+            <p>In the loving memory of Professor Asoke Nath Mitra, we are holding this memorial meeting and lecture. This online lecture is a tribute to the life and work of late professor A. N. Mitra. His contributions to the field of High Energy and Nuclear Physics are recognised widely around the world and he has inspired many to do the same!</p>
+
+            <div class="buttons">
+                <a href="./templates/WittenLecture.html" style="margin-top: 3vw;" class="type2">Learn More</a>
+                <!-- <a href="/lecture" class="type1">Lecture</a> -->
+            </div>
+
+        </div>
+        <div class="circleWitten">
+            <a href="templates/WittenLecture.html"><img src="static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
+        </div>
+    </div>
+
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p>In the loving memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact <a href="mailto:aalok.misra@ph.iitr.ac.in" style="color: cyan;">aalok.misra@ph.iitr.ac.in</a>.</p>
+                <!-- <div class="footer-bottom-links">
+                    <a href="templates/about.html">About</a>
+                    <a href="templates/schedule.html">Events</a>
+                    <a href="templates/attendees.html">Attendees</a>
+                    <a href="templates/regForm.html">Register</a>
+                </div> -->
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+        // Get the value of site.baseurl in console log 
+        console.log("site.baseurl: ", "{{site.baseurl}}");
+    </script>
+</body>
+</html>
