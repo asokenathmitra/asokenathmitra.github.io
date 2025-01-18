@@ -68,13 +68,13 @@
     }
 
     .register-btn {
-        background: #ccc;
+        background: #ffffff;
         color: black;
         border: none;
         padding: 1.9vh 1.67vw;
         margin: 0rem 1.67vw;
         cursor: pointer;
-        border-radius: 1.57vw;
+        border-radius: 10vw;
         font-family: "Krub";
         font-size: calc(0.9rem + 0.24vw);
         /*margin: 0.5rem 0rem;

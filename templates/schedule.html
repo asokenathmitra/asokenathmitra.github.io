@@ -11,6 +11,7 @@
     <title>Schedule of Talks</title>
     <link rel="stylesheet" href="../static/css/navbar.css">
     <link rel="stylesheet" href="../static/css/schedule.css">
+    <script src="../static/js/navbarScript.js"></script>
     <!-- <link rel="stylesheet" type="../text/css" href=""> -->
 </head>
 <body>
@@ -43,10 +44,26 @@
         </div>
     </nav>
 
-    <div class="parallax">
-    <div class="parallax_layer parallax_layer_bg"></div>
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./register.html">Register</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <div class="bg-image-layer"></div>
     <div class="bg-color-layer"></div>
-    <div class="parallax_layer container">
+    <div class="main-container">
         <div class="header">
             <div class="title">Schedule of Talks</div>
             <div class="day-links">
@@ -65,90 +82,90 @@
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://fellows.ias.ac.in/profile/v/FL1988014">Natarajan Panchapakesan</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Opening remarks , Black hole normal modes</p></div>
-                    <div class="time"><p><strong>Time: </strong>9:00 - 9:30 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 9:00 - 9:30 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://fellows.ias.ac.in/profile/v/FL1984005">Harihara Subra Mani</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Quantum Thermodynamics of Small Systems: The Anyonic Otto Engine</p></div>
-                    <div class="time"><p><strong>Time: </strong>9:30 - 10:00 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 9:30 - 10:00 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://nasi.org.in/fellows/dass-n-d-hari/">Nayasinganahalli Desikachar Hari Dass </a></p></div>
                     <div class="topic"><p><strong>Title: </strong>QCD Strings</p></div>
-                    <div class="time"><p><strong>Time: </strong>10:00 - 10:30 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 10:00 - 10:30 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="speaker"><p><a target="_blank" href="">Dayanand Parashar</a></p></div>
+                    <div class="speaker"><p><a target="_blank" href="javascript:void(0);">Dayanand Parashar</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Formulation of Dirac Equation in Curved Spacetime</p></div>
-                    <div class="time"><p><strong>Time: </strong>10:30 - 11:00 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 10:30 - 11:00 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://physics.puchd.ac.in/faculty/cv/mmgupta-2014.pdf">Manmohan Gupta </a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Quark Dynamics to Flavor Dynamics : a la Mitra</p></div>
-                    <div class="time"><p><strong>Time: </strong>11:00 - 11:30 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 11:00 - 11:30 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/T._V._Ramakrishnan">Tiruppattur Venkatachalamurti Ramakrishnan</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>The ‘Un'free Electron Limit for Metals</p></div>
-                    <div class="time"><p><strong>Time: </strong>11:30 AM- 12:00 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 11:30 AM- 12:00 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
@@ -159,30 +176,30 @@
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://www.du.ac.in/du/uploads/departments/faculty_members/Physics_Astrophysics/2809.pdf">R. Ramanathan</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Fields and Wigner Function</p></div>
-                    <div class="time"><p><strong>Time: </strong>2:45 – 3:15 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 2:45 – 3:15 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://www.linkedin.com/in/prof-satendra-sharma-4a400950/?originalSubdomain=ng"> Satendra Sharma</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Nuclear Structure and IBM</p></div>
-                    <div class="time"><p><strong>Time: </strong>3:15 – 3:45 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 3:15 – 3:45 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
@@ -193,51 +210,49 @@
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Muthusamy_Lakshmanan"> Muthusamy Lakshmanan</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Reservoir Computing with Logistic Map</p></div>
-                    <div class="time"><p><strong>Time: </strong>4:15 – 4:45 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 4:15 – 4:45 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" id="Reminiscences">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Amitava_Raychaudhuri">Amitava Raychaudhuri</a>,
                      <a target="_blank" href="https://inspirehep.net/authors/1063472?ui-citation-summary=true">Wasi Haider</a>,
                      <a target="_blank" href="https://www.imsc.res.in/romesh_k_kaul">Romesh Kaul</a>,
                      <a target="_blank" href="https://scholar.google.co.in/citations?user=XZPZpasAAAAJ&hl=en">R. S. Kaushal</a>,
                      <a target="_blank" href="https://en.wikipedia.org/wiki/Kalyan_Bidhan_Sinha">Kalyan Sinha</a></p></div>
-                    <div class="topic" style="display: inline-flex; vertical-align: middle;"><p>
-                        <strong style="display: inline-flex;">Title: </strong> 
-                        <pre style="display: inline-flex; font-size: 0.9rem; font-weight: bold; margin: 0px; margin-top: 4px; vertical-align: bottom;"> Prof. Asoke Nath Mitra Reminiscences Session</pre></p></div>
-                    <div class="time"><p><strong>Time: </strong>4:45 – 6:30 PM</p></div>
+                    <div class="topic" style="display: inline-flex; vertical-align: middle;"><p id="remtit"><strong>Title: </strong>Prof. Asoke Nath Mitra Reminiscences Session</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 4:45 – 6:30 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://www.lsu.edu/physics/people/faculty/rau.php"> A. Ravi P. Rau</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Varied binding of three bodies in atoms and nuclei Map</p></div>
-                    <div class="time"><p><strong>Time: </strong>6:30 – 7:00 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>14 April 2025, 6:30 – 7:00 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
@@ -254,120 +269,120 @@
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/James_P._Vary"> James Vary</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Ab Initio Approach to Hadrons and Nuclei</p></div>
-                    <div class="time"><p><strong>Time: </strong>8:30 – 9:00 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 8:30 – 9:00 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://profiles.stanford.edu/stanley-brodsky"> Stanley J. Brodsky</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Recent Advances in Light Front Physics</p></div>
-                    <div class="time"><p><strong>Time: </strong>9:00 – 9:30 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 9:00 – 9:30 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Naresh_Dadhich"> Naresh Dadhich</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Geometry driven dynamics of the fundamental forces  </p></div>
-                    <div class="time"><p><strong>Time: </strong>9:30 – 10:00 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 9:30 – 10:00 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Mohammad_Sami_(professor)">Mohammad Sami</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Standard model of universe; successes and challenges</p></div>
-                    <div class="time"><p><strong>Time: </strong>10:00 – 10:30 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 10:00 – 10:30 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://www.tifr.res.in/dnap/high-energy-gamma-ray-lab.html">Indranil Mazumdar</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Few/Many-Body Problems</p></div>
-                    <div class="time"><p><strong>Time: </strong>10:30 – 11:00 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 10:30 – 11:00 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://www.du.ac.in/du/uploads/departments/faculty_members/Physics_Astrophysics/3054.pdf">Brajesh Choudhary</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>India’s contributions to the LHC and the CMS experiment</p></div>
-                    <div class="time"><p><strong>Time: </strong>11:00 – 11:30 AM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 11:00 – 11:30 AM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Ajoy_Ghatak">Ajoy Ghatak</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Polarization of Light, Entanglement  & Bell’s Inequality</p></div>
-                    <div class="time"><p><strong>Time: </strong>11:30 – 12:00 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 11:30 – 12:00 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://researchers.adelaide.edu.au/profile/anthony.thomas">Anthony William Thomas</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Are the results of effective field theory really model independent: insight from few-body systems</p></div>
-                    <div class="time"><p><strong>Time: </strong>12:00 – 12:30 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 12:00 – 12:30 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
@@ -378,60 +393,60 @@
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Jutta_Kunz">Jutta Kunz</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Ringdown of Rotating Black Holes</p></div>
-                    <div class="time"><p><strong>Time: </strong>3:30 – 4:00 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 3:30 – 4:00 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Daya_Shankar_Kulshreshtha">Daya Shankar Kulshreshtha</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Boson Stars</p></div>
-                    <div class="time"><p><strong>Time: </strong>4:00 – 4:30 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 4:00 – 4:30 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://www.researchgate.net/profile/Patrick-Das-Gupta">Patrick Das Gupta</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Quantum Shardula, Measurement Problem and Gravitational Wave Detection</p></div>
-                    <div class="time"><p><strong>Time: </strong>4:30 – 5:00 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 4:30 – 5:00 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="speaker"><p><a target="_blank" href="https://inspirehep.net/authors/2274471?ui-citation-summary=true">J. D. Anand</a></p></div>
                     <div class="topic"><p><strong>Title: </strong>Neutron Stars</p></div>
-                    <div class="time"><p><strong>Time: </strong>5:00 – 5:30 PM</p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025, 5:00 – 5:30 PM</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
                 
@@ -439,19 +454,19 @@
                     Coffee Break: 5:30 PM - 6:15 PM
                 </div>
 
-                <div class="card">
+                <div class="card" id="Witten">
                     <div class="speaker"><p><a target="_blank" href="https://en.wikipedia.org/wiki/Edward_Witten">Edward Witten</a></p></div>
-                    <div class="topic"><p><strong>Title: </strong>A.N. Mitra Memorial Lecture: A Background Independent Algebra for Gravity</p></div>
-                    <div class="time"><p><strong>Time: </strong></p><p>6:15 – 6:30 PM: A brief introduction to the event and the speaker</p>
+                    <div class="topic"><p><strong>Title: </strong><a href="./WittenLecture.html" id="wittit">A.N. Mitra Memorial Lecture: A Background Independent Algebra for Gravity</a></p></div>
+                    <div class="time"><p><strong>Time: </strong>15 April 2025</p><p>6:15 – 6:30 PM: A brief introduction to the event and the speaker</p>
                     <p>6:30 - 8:00 PM: Lecture</p></div>
                     <div class="links">
-                        <a href="#" class="meeting">Meeting Link</a>
-                        <a href="#" class="youtube">YouTube Link</a>
-                        <a href="#" class="lecture">Lecture File</a>
+                        <a href="javascript:void(0);" class="meeting">Meeting Link</a>
+                        <a href="javascript:void(0);" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
                     </div>
                     <div class="abstract">
-                        <!-- <button onclick="toggleAbstract(this)">View Abstract</button>
-                        <p><b>Abstract: </b>N.A.</p> -->
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
                     </div>
                 </div>
 
@@ -460,7 +475,6 @@
                 </div>
             </li>
         </ul>
-    </div>
     </div>
 
 <script>
@@ -506,6 +520,7 @@
         }
         updateIndicator(btn_id_a, btn_id_i);
     }
+
     let current_url = window.location.href;
     if (current_url.search("#day-2") >= 0) {
         goToCard(1);
