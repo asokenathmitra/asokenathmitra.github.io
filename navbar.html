@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @font-face {
+            font-family: "Lora";
+            src: url("../static/fonts/Lora/static/Lora-Regular.ttf");
+            font-weight: normal;
+            font-style: normal;
+        }
+    @font-face {
+            font-family: "Krub";
+            src: url("../static/fonts/Krub/Krub-Regular.ttf");
+            font-weight: normal;
+            font-style: normal;
+        }
+    /*Desktop Navbar*/
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.67vw 0 1.00vw;
+        background: #1C091D; /*#95A3B9*/
+        /*background-image: url("/static/images/blackboardbg3.jpg");*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        box-shadow: 0 0.1vw 0.21vw rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.67vw;
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: white;
+        font-family: "Krub"; /*Fredericka the Great*/
+        font-size: calc(0.9rem + 0.24vw); /*22px*/
+        font-weight: normal;
+        padding: 2.9vh 1.67vw;
+    }
+
+    .nav-item:hover {
+        text-decoration: none;
+        background-color: #ddd;
+        color: black;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.83vw;
+        align-items: center;
+        font-weight: normal;
+    }
+
+    .register-btn {
+        background: #ccc;
+        color: black;
+        border: none;
+        padding: 1.9vh 1.67vw;
+        margin: 0rem 1.67vw;
+        cursor: pointer;
+        border-radius: 1.57vw;
+        font-family: "Krub";
+        font-size: calc(0.9rem + 0.24vw);
+        /*margin: 0.5rem 0rem;
+        /*margin-right: 20px;*/
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        font-family: "Krub";
+        font-size: calc(0.9rem + 0.24vw);
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        text-align: center;
+        background-color: #333;
+        /*min-width: 160px;*/
+        z-index: 1;
+        right: 0;
+        font-family: "Krub";
+        font-size: calc(0.675rem + 0.18vw);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.63vw 1.67vw;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn {
+        padding: 2.9vh 1.67vw;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+    /*Mobile Navbar*/
+    .mobile-topnav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 0vw;
+        background-color: #333;
+        display: none;
+    }
+
+    .mobile-topnav #mobile-myLinks {
+        display: none;
+    }
+
+    .mobile-topnav a, .mobile-dropdown-btn {
+        background-color: #333;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        font-family: "Krub";
+        font-weight: normal;
+    }
+
+    .mobile-topnav .mobile-nav-header {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        font-weight: normal;
+        font-family: "Lora";
+    }
+
+    .mobile-topnav a.mobile-icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 14px 24px 14px 24px;
+        font-family: "Krub";
+    }
+
+    .mobile-topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .mobile-topnav .mobile-dropdown-container {
+        display: none;
+        background-color: #262626;
+    }
+
+    .mobile-dropdown-container a {
+        font-size: 12px;
+        padding-left: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+    /*Desktop Navbar*/
+    .navbar {
+        display: none;
+        flex-wrap: wrap;
+        width: 100vw;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.167vh 1.67vw 0.167vh 1.00vw;
+        background: #1C091D; /*#95A3B9*/
+        /*background-image: url("/static/images/blackboardbg3.jpg");*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        box-shadow: 0 0.1vw 0.21vw rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.67vw;
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: white;
+        font-family: "Krub"; /*Fredericka the Great*/
+        font-size: calc(0.8rem + 0.47vw); /*22px*/
+        font-weight: normal;
+        padding: 2.9vh 1.67vw;
+    }
+
+    .nav-item:hover {
+        text-decoration: none;
+        background-color: #ddd;
+        color: black;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.83vw;
+        align-items: center;
+        font-weight: normal;
+    }
+
+    .register-btn {
+        background: #ccc;
+        color: black;
+        border: none;
+        padding: 1.9vh 1.67vw;
+        margin: 0rem 1.67vw;
+        cursor: pointer;
+        border-radius: 1.57vw;
+        font-family: "Krub";
+        font-size: calc(0.8rem + 0.47vw);
+        /*margin: 0.5rem 0rem;
+        /*margin-right: 20px;*/
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        font-family: "Krub";
+        font-size: calc(0.8rem + 0.47vw);
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        text-align: center;
+        background-color: #333;
+        /*min-width: 160px;*/
+        z-index: 1;
+        right: 0;
+        font-family: "Krub";
+        font-size: calc(0.5rem + 0.4vw);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.63vw 1.67vw;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn {
+        padding: 2.9vh 1.67vw;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+    /*Mobile Navbar*/
+    .mobile-topnav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #1C091D;;
+        display: block;
+        
+    }
+
+    .mobile-topnav #mobile-myLinks {
+        display: none;
+    }
+
+    .mobile-topnav a, .mobile-dropdown-btn {
+        background-color: #1C091D;;
+        color: white;
+        padding: 2.9vh 1.67vw;
+        text-decoration: none;
+        font-size: calc(0.9rem + 0.24vw);
+        display: block;
+        font-family: "Krub";
+        font-weight: normal;
+    }
+
+    .mobile-topnav .mobile-nav-header {
+        color: white;
+        padding: 2.9vh 1.67vw;
+        text-decoration: none;
+        font-size: calc(0.91rem + 0.28vw);
+        display: block;
+        font-weight: normal;
+        font-family: "Krub";
+    }
+
+    .mobile-topnav a.mobile-icon {
+        background: #1C091D;;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2.9vh 5.505vw;
+        font-size: calc(0.87rem + 0.28vw);
+        align-items: center;
+        font-family: "Krub";
+    }
+
+    .mobile-topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .mobile-topnav .mobile-dropdown-container {
+        display: none;
+        background-color: #262626;
+    }
+
+    .mobile-dropdown-container a {
+        font-size: calc(0.675rem + 0.18vw);
+        padding-left: calc(1rem + 1.95vw);
+    }
+    }
+</style>
+</head>
+<body>
+<!-- Top Navigation Menu -->
+<div class="mobile-topnav">
+    <b class="mobile-nav-header">Menu</b>
+    <div id="mobile-myLinks">
+        <a href="../index.html">Home</a>
+        <a href="./about.html">Prof. A. N. Mitra</a>
+        <a href="#!" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+        <div class="mobile-dropdown-container" id="mobile-drop-container">
+            <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+            <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+            <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+        </div>
+        <a href="./attendees.html">Attendees</a>
+        <a href="./register.html">Register</a>
+    </div>
+    <a href="#!" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+</div>
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="../index.html" class="nav-item">Home</a>
+        <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+    </div>
+    <!--<div class="logo">Logo</div> -->
+    <div class="nav-right">
+        <div class="dropdown">
+            <div class="dropbtn">Schedule ▾</div>
+            <div class="dropdown-content">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+        </div>
+        <a href="./attendees.html" class="nav-item">Attendees</a>
+        <a href="./register.html"> <button class="register-btn">Register</button></a>
+        <!-- <a href="/register" class="nav-item">Register</a> -->
+        <!-- <div class="dropdown">
+            <div class="dropbtn" style="padding-left: 0rem;"> &nbsp&nbsp▾&nbsp&nbsp </div>
+            <div class="dropdown-content">
+                <a href="/attendees">Attendees</a>
+            </div>
+        </div> -->
+    </div>
+</nav>
+
+<!--
+
+    To use this navbar, add a top margin of calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh)) to the container of the body
+
+-->
+
+<div style="padding-left:16px;height:5000px;margin:calc(1.75*(0.9rem + 0.28vw) + 2.9vh + 2.9vh) auto;">
+  <h3>Vertical Mobile Navbar</h3>
+  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+</div>
+
+<script>
+    function mobileHamBurgerToggle() {
+    var x = document.getElementById("mobile-myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    }
+
+    function mobile_dropdown_click() {
+        var x = document.getElementById("mobile-drop-container");
+        var i;
+
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
