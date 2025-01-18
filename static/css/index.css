@@ -261,93 +261,6 @@ t    }
     }
 
 
-/* Join Section and Footer - Page 3 */
-    .page-three {
-/*        min-height: 100vh;*/
-        display: flex;
-        flex-direction: column;
-        background: transparent;
-    }
-
-    .join-section {
-        padding: 3.35vw 1.67vw;
-        text-align: center;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .join-buttons {
-        margin-top: 1.67vw;
-        display: flex;
-        justify-content: center;
-        gap: 0.83vw;
-    }
-
-    .share-btn {
-        background: transparent;
-        border: 0.05vw solid #000;
-        color: #000;
-        padding: 0.42vw 0.83vw;
-        cursor: pointer;
-        border-radius: 0.21vw;
-    }
-
-/* Footer */
-    footer {
-        background: transparent;
-        padding: 1.67vw 0rem 0rem 0rem;
-    }
-
-    .footer-links {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.67vw;
-    }
-
-    .link-column h4 {
-        margin-bottom: 0.84vw;
-    }
-
-    .link-column a {
-        display: block;
-        color: #666;
-        text-decoration: none;
-        margin-bottom: 0.42vw;
-    }
-
-    .footer-bottom {
-        background: #2c2c2c;
-        font-family: "Krub";
-        margin-top: 3rem;
-        padding: 1vw 0.84vw;
-        border-top: 0.052vw solid #ddd;
-        display: flex;
-        justify-content: space-between;
-        color: #aaa;
-        font-size: max(1vw, 10px);
-        flex-wrap: wrap;
-    }
-
-    .footer-bottom p {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-    }
-
-    .footer-bottom-links {
-        display: flex;
-        justify-content: space-between;
-        gap: 1.67vw;
-    }
-
-    .footer-bottom-links a {
-        padding: 0.vw 1.67vw 0rem 0rem;
-        color: #aaa;
-        text-decoration: none;
-    }
-
 /* Smooth Scrolling */
     html {
         scroll-behavior: smooth;
@@ -474,13 +387,7 @@ t    }
             /*display: block;*/
             /*border:1px solid #A0A0A0;*/
         }
-
-        .footer-bottom p {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
+        
         #outside {
             display: none;
         }
