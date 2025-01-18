@@ -89,8 +89,12 @@
 
 /* Responsiveness*/
     @media (max-width: 768px) {
+
         .footer-bottom p {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
+            text-align: center;
             width: 100%;
+            margin-top: 10px;
         }
