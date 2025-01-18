@@ -19,7 +19,8 @@ form {
     padding: 30px;
     border-radius: 15px;
     margin: auto;
-    margin-top: max(3.41vw, 60px);
+    margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));
+    margin-bottom: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1;

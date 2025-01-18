@@ -403,7 +403,7 @@ t    }
 
         #fillerbox {
 /*            width: 50%;*/
-            background-image: url("./images/anmitra2.png");
+            background-image: url("../images/anmitra2.png");
             background-size: cover;
             border-radius: 50%;
             width: 100%;

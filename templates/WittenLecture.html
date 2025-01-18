@@ -11,6 +11,8 @@
     <title>Memorial Lecture</title>
     <link rel="stylesheet" href="../static/css/navbar.css">
     <link rel="stylesheet" href="../static/css/WittenLecture.css">
+    <script src="../static/js/navbarScript.js"></script>
+    <script src="../static/js/about.js"></script>
 </head>
 <body>
     <!-- Loading animation -->
@@ -20,10 +22,28 @@
 
     <div class="background the-page"></div>
 
-    <!-- Navbar -->
+
+    <!-- Navigation bar -->
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="./index.html#!" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./regForm.html">Register</a>
+        </div>
+        <a href="./home.html#!" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
     <nav class="navbar">
         <div class="nav-links">
-            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./index.html" class="nav-item">Home</a>
             <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
 
         </div>
@@ -32,8 +52,8 @@
             <div class="dropdown">
                 <div class="dropbtn">Schedule ▾</div>
                 <div class="dropdown-content">
-                    <a href="./schedule.html">Day 1</a>
-                    <a href="./schedule.html">Day 2</a>
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
                     <a href="./WittenLecture.html">Ed Witten's Lecture</a>
                 </div>
             </div>
@@ -77,27 +97,6 @@
             
         </div>
     </div>
-
-
-
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            // Wait for 500ms before hiding the loading animation
-            setTimeout(function () {
-                // Hide the loading animation
-                document.getElementById('loading').style.display = 'none';
-
-                // Show the main content
-                const elements = document.getElementsByClassName('the-page');
-                for (let i = 0; i < elements.length; i++) {
-                    elements[i].style.display = 'block';
-                }
-                // document.getElementsByClassName('the-page').style.display = 'none';
-                document.querySelector('nav').style.display = 'flex';
-            }, 500); // 500ms delay
-        });
-
-    </script>
 
 </body>
 </html>

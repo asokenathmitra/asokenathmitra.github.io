@@ -55,7 +55,7 @@ body {
 /*        padding: 30px; */
 /*        margin: 60px 100px 20px 100px; */
         margin: auto;
-        margin-top: 60px;
+        margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));
         margin-bottom: 30px;
         width: 85%;
         color: black;
