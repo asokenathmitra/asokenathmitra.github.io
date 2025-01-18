@@ -445,6 +445,10 @@ t    }
             order: 2;
         }
 
+        #about-lecture a {
+            font-size: 14px;
+        }
+
         .hero-image {
             max-width: 100%;
         }
