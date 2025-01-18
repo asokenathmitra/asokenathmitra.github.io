@@ -20,28 +20,14 @@
     --tertiary-color: #F4F4F4;
 }
 
-
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  overflow: auto;
-  height: 100%;
-/*  overscroll-behavior: none;*/
-}
-
-/* Navbar */
+/*Desktop Navbar*/
     .navbar {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        min-height: 60px;
         justify-content: space-between;
         align-items: center;
-/*        vertical-align: middle;*/
-        padding: 0px 1.67vw;
+        padding: 0 1.67vw 0 1.00vw;
         background: #1C091D; /*#95A3B9*/
         /*background-image: url("/static/images/blackboardbg3.jpg");*/
         position: fixed;
@@ -59,18 +45,12 @@ body {
     }
 
     .nav-item {
-        display: flex;
-        min-height: 60px;
         text-decoration: none;
-        align-items: center;
         color: white;
-        font-family: "Krub"; 
-        font-size: max(1vw, var(--min-font-size-px));
-/*        font-size: max(1.15vw, var(--min-font-size-px));*/
+        font-family: "Krub"; /*Fredericka the Great*/
+        font-size: calc(0.9rem + 0.24vw); /*22px*/
         font-weight: normal;
-        margin: auto;
-        padding: 0px 1.67vw;
-/*        padding: 0.83vw 1.67vw;*/
+        padding: 2.9vh 1.67vw;
     }
 
     .nav-item:hover {
@@ -83,26 +63,20 @@ body {
         display: flex;
         flex-wrap: wrap;
         gap: 0.83vw;
-        padding: 0 1.67vw;
         align-items: center;
         font-weight: normal;
     }
 
     .register-btn {
-        min-height: 40px;
         background: #ccc;
-/*        max-height: 55px;*/
         color: black;
         border: none;
-        padding: auto max(2.5vw, 10px);
-/*        padding: 0.83vw 1.67vw;*/
-        margin: 0.2vw 1.67vw;
+        padding: 1.9vh 1.67vw;
+        margin: 0rem 1.67vw;
         cursor: pointer;
-        align-items: center;
-        border-radius: max(1.57vw, calc(calc(var(--vw-to-px)*1.57)*var(--min-font-size-px)/22));
-/*        border-radius: 1.57vw;*/
+        border-radius: 1.57vw;
         font-family: "Krub";
-        font-size: max(1vw, calc(calc(var(--vw-to-px)*1)*var(--min-font-size-px)/22));
+        font-size: calc(0.9rem + 0.24vw);
         /*margin: 0.5rem 0rem;
         /*margin-right: 20px;*/
     }
@@ -111,8 +85,7 @@ body {
         position: relative;
         display: inline-block;
         font-family: "Krub";
-        font-size: max(1vw, calc(calc(var(--vw-to-px)*1.15)*var(--min-font-size-px)/22));
-/*        font-size: 1.15vw;*/
+        font-size: calc(0.9rem + 0.24vw);
         color: white;
     }
 
@@ -125,7 +98,7 @@ body {
         z-index: 1;
         right: 0;
         font-family: "Krub";
-        font-size: max(0.84vw, calc(calc(var(--vw-to-px)*0.84)*var(--min-font-size-px)/22));
+        font-size: calc(0.675rem + 0.18vw);
     }
 
     .dropdown-content a {
@@ -145,7 +118,7 @@ body {
     }
 
     .dropbtn {
-        padding: 0.84vw 1.67vw;
+        padding: 2.9vh 1.67vw;
     }
 
     .dropdown:hover .dropbtn {
@@ -153,3 +126,242 @@ body {
         color: black;
     }
 
+
+    /*Mobile Navbar*/
+    .mobile-topnav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 0vw;
+        background-color: #333;
+        display: none;
+        z-index: 1000;
+    }
+
+    .mobile-topnav #mobile-myLinks {
+        display: none;
+    }
+
+    .mobile-topnav a, .mobile-dropdown-btn {
+        background-color: #333;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        font-family: "Krub";
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .mobile-topnav .mobile-nav-header {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        font-weight: normal;
+        font-family: "Lora";
+        text-align: left;
+    }
+
+    .mobile-topnav a.mobile-icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 14px 24px 14px 24px;
+        font-family: "Krub";
+    }
+
+    .mobile-topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .mobile-topnav .mobile-dropdown-container {
+        display: none;
+        background-color: #262626;
+    }
+
+    .mobile-dropdown-container a {
+        font-size: 12px;
+        padding-left: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+    /*Desktop Navbar*/
+    .navbar {
+        display: none;
+        flex-wrap: wrap;
+        width: 100vw;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.167vh 1.67vw 0.167vh 1.00vw;
+        background: #1C091D; /*#95A3B9*/
+        /*background-image: url("/static/images/blackboardbg3.jpg");*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        box-shadow: 0 0.1vw 0.21vw rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.67vw;
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: white;
+        font-family: "Krub"; /*Fredericka the Great*/
+        font-size: calc(0.8rem + 0.47vw); /*22px*/
+        font-weight: normal;
+        padding: 2.9vh 1.67vw;
+    }
+
+    .nav-item:hover {
+        text-decoration: none;
+        background-color: #ddd;
+        color: black;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.83vw;
+        align-items: center;
+        font-weight: normal;
+    }
+
+    .register-btn {
+        background: #ccc;
+        color: black;
+        border: none;
+        padding: 1.9vh 1.67vw;
+        margin: 0rem 1.67vw;
+        cursor: pointer;
+        border-radius: 1.57vw;
+        font-family: "Krub";
+        font-size: calc(0.8rem + 0.47vw);
+        /*margin: 0.5rem 0rem;
+        /*margin-right: 20px;*/
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        font-family: "Krub";
+        font-size: calc(0.8rem + 0.47vw);
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        text-align: center;
+        background-color: #333;
+        /*min-width: 160px;*/
+        z-index: 1;
+        right: 0;
+        font-family: "Krub";
+        font-size: calc(0.5rem + 0.4vw);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.63vw 1.67vw;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn {
+        padding: 2.9vh 1.67vw;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+    /*Mobile Navbar*/
+    .mobile-topnav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #1C091D;;
+        display: block;
+        
+    }
+
+    .mobile-topnav #mobile-myLinks {
+        display: none;
+        text-align: left;
+    }
+
+    .mobile-topnav a, .mobile-dropdown-btn {
+        background-color: #1C091D;;
+        color: white;
+        padding: 2.9vh 1.67vw;
+        text-decoration: none;
+        font-size: max(14px, calc(0.9rem + 0.24vw));
+        font-size: 14px;
+        display: block;
+        font-family: "Krub";
+        font-weight: normal;
+    }
+
+    .mobile-topnav .mobile-nav-header {
+        color: white;
+        padding: 2.9vh 1.67vw;
+        text-decoration: none;
+        font-size: max(14px, calc(0.91rem + 0.28vw));
+        display: block;
+        font-weight: normal;
+        font-family: "Krub";
+    }
+
+    .mobile-topnav a.mobile-icon {
+        background: #1C091D;;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2.9vh 5.505vw;
+        font-size: calc(0.87rem + 0.28vw);
+        align-items: center;
+        font-family: "Krub";
+    }
+
+    .mobile-topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .mobile-topnav .mobile-dropdown-container {
+        display: none;
+        background-color: #262626;
+    }
+
+    .mobile-dropdown-container a {
+        padding-left: calc(1rem + 1.95vw);
+        font-size: max(10px, calc(0.675rem + 0.18vw));
+    }
+    }

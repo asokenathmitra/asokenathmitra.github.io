@@ -142,7 +142,7 @@ blockquote {
 }
 
 #birth-death-dates {
-    width: 100%;
+    width: auto;
     margin-bottom: 5vh;
 /*    font-size: 1rem; */
     color: #da4968;
@@ -150,6 +150,10 @@ blockquote {
     font-weight: bold;
     font-size: max(0.83vw, 20px); 
     font-family: monospace;
+/*    box-shadow: inset 3px 4px 5px;*/
+    -moz-box-shadow: -5px -5px 0 #888;
+    -webkit-box-shadow: -5px -5px 0 #888;
+    box-shadow: -5px -5px 0 #888;
 }
 
 ol {

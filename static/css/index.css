@@ -119,8 +119,8 @@ body {
         gap: 0.78vw;
         border-color: black;
         border-width: 0.26vw;
-        justify-content: flex-start;
-    }
+        justify-content: flex-start;display: inline-flex; justify-content: space-between; align-content: righ
+t    }
 
     .hero-text .buttons a {
         text-decoration: none;
@@ -155,13 +155,24 @@ body {
 
     .hero-text .buttons .type1 {
         background-color: #000;
+        transition: background-color 0.2s;
         color: #fff;
     }
 
-    .hero-text .buttons .type2 {
+    .hero-text .buttons .type1:hover {
         background-color: #f8f9fa;
-        border: 0.052vw solid #ddd;
         color: #333;
+    }
+
+    .hero-text .buttons .type2 {
+        transition: background-color 0.2s;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .hero-text .buttons .type2:hover {
+        background-color: #000;
+        color: #fff;
     }
 
     .hero-image {
@@ -351,7 +362,12 @@ body {
         }
 
         body {
-            margin-top: 60px;
+            margin-top: 0px;
+        }
+
+        .anmitra {
+            margin: auto;
+            padding: auto;
         }
 
         .hero {
@@ -387,7 +403,7 @@ body {
 
         #fillerbox {
 /*            width: 50%;*/
-            background-image: url("../images/anmitra2.png");
+            background-image: url("./images/anmitra2.png");
             background-size: cover;
             border-radius: 50%;
             width: 100%;
@@ -396,12 +412,15 @@ body {
 
         .hero-text .buttons {
             align-items: self-start;
-            gap: 35px;
-            margin: auto;
+            gap: 0px;
+            margin: 10px auto;
+            width: 100%;
         }
 
         #date-event {
             width: 100%;
+            color: black;
+            justify-content: center;
         }
 
         .hero-text {
@@ -438,6 +457,7 @@ body {
             order: 3;
             width: 50%;
             align-items: center;
+            justify-content: center;
         }
 
         .circleWitten img {

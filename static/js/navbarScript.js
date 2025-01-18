@@ -1,3 +1,5 @@
+console.log("js running");
+
 function mobileHamBurgerToggle() {
 var x = document.getElementById("mobile-myLinks");
 if (x.style.display === "block") {

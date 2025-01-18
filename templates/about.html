@@ -11,23 +11,9 @@
     <title>Memorial Lecture</title>
     <link rel="stylesheet" href="../static/css/navbar.css">
     <link rel="stylesheet" href="../static/css/about.css">
+    <script src="../static/js/navbarScript.js"></script>
 </head>
 <body>
-    <!-- <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Memorial Lecture</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/schedule">Lecture</a></li>
-                    <li><a href="/teaminfo">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
     
     <!-- Loading animation -->
     <div id="loading">
@@ -37,8 +23,26 @@
 
     <div class="background the-page"></div>
     
-    <!-- Navbar -->
-    <nav class="navbar the-page">
+<!-- Navbar -->
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="./home.html#!" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./register.html">Register</a>
+        </div>
+        <a href="./home.html#!" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <nav class="navbar">
+
         <div class="nav-links">
             <a href="../index.html" class="nav-item">Home</a>
             <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
@@ -49,15 +53,26 @@
             <div class="dropdown">
                 <div class="dropbtn">Schedule ▾</div>
                 <div class="dropdown-content">
-                    <a href="./schedule.html">Day 1</a>
-                    <a href="./schedule.html">Day 2</a>
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
                     <a href="./WittenLecture.html">Ed Witten's Lecture</a>
                 </div>
             </div>
             <a href="./attendees.html" class="nav-item">Attendees</a>
-            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+            <a href="./register.html"> <button class="register-btn">Register</button></a>
+            <!-- <a href="/register" class="nav-item">Register</a> -->
+            <!-- <div class="dropdown">
+                <div class="dropbtn" style="padding-left: 0rem;"> &nbsp&nbsp▾&nbsp&nbsp </div>
+                <div class="dropdown-content">
+                    <a href="/attendees">Attendees</a>
+                </div>
+            </div> -->
         </div>
     </nav>
+
+    <div style="margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));"></div>
+    <!-- <div style="padding-top: 60px;"></div> -->
+
 
     <!-- <div class=bg-img style="background: rgba(99, 66, 13, 0.375);"
         <section class="the-page container">
@@ -141,7 +156,9 @@
                     elements[i].style.display = 'block';
                 }
                 // document.getElementsByClassName('the-page').style.display = 'none';
-                document.querySelector('nav').style.display = 'flex';
+                // document.getElementsByClassName('navbar').style.display = 'flex';
+                document.getElementsByClassName('mobile-topnav').style.display = 'flex';
+                // document.querySelector('navbar').style.display = 'flex';
             }, 500); // 500ms delay
         });
 
