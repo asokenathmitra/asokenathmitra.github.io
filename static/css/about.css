@@ -36,7 +36,7 @@ body {
 /*    background-image: url("/static/images/bg1963paper.png");*/
 /*    transform: rotate(-0deg);*/
 /*    transform-origin: center;*/
-    opacity: 0.55; /*0.15*/
+    opacity: 1; /*0.15*/
 /*    background-repeat: no-repeat;*/
     background-size: cover;
     background-position: top right;
@@ -44,14 +44,31 @@ body {
     z-index: -1; /* Places it behind other content */
 }
 
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(133, 91, 13, 0.375); /* Adjust the color and opacity as needed */
+    z-index: -1;
+}
+
 .container {
     width: 70%;
     margin: auto;
     padding: max(1.67vw, 10px);
-    margin-top: 60px;
+    margin-top: 100px;
     margin-bottom: 20px;
     overflow: hidden;
-    background: #a0a0a0dd;
+    background: #ffa742dd;
+    background: #d69200dd;
+    background: #4d6f69dd;
+    /* filter: drop-shadow(1rem 1rem 10px #50341480); */
+    border-radius: 30px;
+    /* box-shadow: 0 0 5px 10px #ffa742dd; */
+    box-shadow: 0 0 50px 10px #00000030;
 /*    opacity: 0.9;*/
 /*    filter: blur(5px);*/
 }
@@ -102,10 +119,12 @@ blockquote {
 
 .content h2 {
     font-family: "Lora";
-    text-decoration: underline;
-    font-size: max(2.5vw, 30px);
+    /* text-decoration: underline; */
+    font-size: max(2.5vw, 45px);
+    font-weight: lighter;
+    margin-bottom: 1vh;
 /*    font-size: 3rem;*/
-    color: #333;
+    color: rgb(233, 190, 0);
 /*    text-align: center;*/
 }
 
@@ -118,14 +137,26 @@ blockquote {
 
 .ref-link {
     font-family: monospace;
-    font-size: max(0.8vw, 10px);
+    font-size: max(0.8vw, 14px);
+    color: #ffd000;
+    text-wrap: wrap;
+}
+
+.ref-link:hover {
+    font-family: monospace;
+    font-size: max(0.8vw, 14px);
+    color: #da4968;
     text-wrap: wrap;
 }
 
 #birth-death-dates {
     width: 100%;
+    margin-bottom: 5vh;
 /*    font-size: 1rem; */
-    font-size: max(0.83vw, 14px); 
+    color: #da4968;
+    /* color: rgb(0, 190, 181); */
+    font-weight: bold;
+    font-size: max(0.83vw, 20px); 
     font-family: monospace;
 }
 
@@ -146,8 +177,10 @@ li a {
 
 #source-citation {
     font-family: Krub;
-    font-weight: bold;
+    padding-top: 3vh;
+    /* font-weight: bold; */
     text-align: left;
+    font-size: max(0.8vw, 14px);
     width: 95%;
 }
 
