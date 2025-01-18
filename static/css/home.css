@@ -11,7 +11,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #A0A0A0; /* #624664; /* #554156*/
+    /* background-color: #A0A0A0; /* #624664; #554156 */
+    background-color: rgba(133, 91, 13, 0.375); /* Adjust the color and opacity as needed */
     opacity: 0.88;
     z-index: -10; 
     margin: 0vw;
@@ -26,8 +27,8 @@ body {
     width: 100%;
     height: 100%;
     padding-left: 8.36vw;
-    background-image: url("../images/bgFinal.jpg");\
-    opacity: 1;
+    background-image: url("../images/bgFinal.jpg");
+    opacity: 0.5;
 /*    background-repeat: no-repeat;*/
     background-size: cover;
     background-position: center;
@@ -40,11 +41,13 @@ body {
     .biggerContainer {
 /*        z-index: 1;*/
         background-image: url("../images/anmitrahome1.png");
+        filter: drop-shadow(0px 0px 20px #00000080);
         opacity: 1;
         background-repeat: no-repeat;
         background-size: auto 100%;
         margin: auto;
         /*height: 40vw;*/ /*80vh*/
+        /* box-shadow: 0 0 50px 10px #00000030; */
         display: flex;
 /*        flex-wrap: wrap;*/
     }
@@ -74,7 +77,10 @@ body {
 
     .witten {
         border-radius: 1.04vw; 
-        background-color: rgba(00, 60, 60, 1); /*29, 29, 29, 0.5  85, 65, 86, 1*/
+        /* 29, 29, 29, 0.5  85, 65, 86, 1 */
+        /* background-color: rgba(00, 60, 60, 0.87);  */
+        background-color: #4d6f69dd;
+        filter: drop-shadow(0px 0px 20px #00000080);
         /*background: transparent;*/
         padding-top: 3.14vw;
         padding-bottom: 3.14vw;
@@ -83,8 +89,8 @@ body {
     }
 
     .hero-text { 
-        width: 50%;
-        max-width: 50%;
+        width: 60%;
+        max-width: 60%;
         text-align: left;
         padding-left: 2.61vw;
         padding-right: 1.31vw;
@@ -132,7 +138,7 @@ body {
         width: 50%;
         align-items: center;
         padding: 0.52vw 1.04vw;
-        border-radius: 1.57vw;
+        border-radius: 200vw;
     }
 
     /*.hero-text a {
@@ -193,15 +199,15 @@ body {
 
     #about-lecture a {
         text-decoration: none;
-        color: #ff3864;
-        font-weight: bold;
+        color: #ffd000;
+       /* font-weight: bold; */
         white-space: nowrap;
     }
 
     #about-lecture a:hover {
         border-radius: 5px;
 /*        background-color: #ff3864;*/
-        color: yellow;
+        color: #ff3864;
 /*        font-size: max(0.9vw, 12px);;*/
         padding: 2px;
 /*        margin-bottom: 5px;*/
