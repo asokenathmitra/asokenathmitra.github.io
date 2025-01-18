@@ -264,7 +264,6 @@ tr:hover {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
-        padding-top: 80px;
     }
 
     .search-filter-container {
