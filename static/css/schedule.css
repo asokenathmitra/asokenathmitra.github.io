@@ -122,9 +122,12 @@
             scrollbar-width: none;
             scroll-snap-type: x mandatory;
         }
+        
+        
 
         .cards-container {
             display: flex;
+            width: 50%;
             flex-direction: column;
             width: 94.737%;
             margin: 1rem auto;
