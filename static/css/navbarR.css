@@ -321,7 +321,8 @@
         color: white;
         padding: 2.9vh 1.67vw;
         text-decoration: none;
-        font-size: calc(0.9rem + 0.24vw);
+        font-size: max(14px, calc(0.9rem + 0.24vw));
+        font-size: 14px;
         display: block;
         font-family: "Krub";
         font-weight: normal;
@@ -331,7 +332,7 @@
         color: white;
         padding: 2.9vh 1.67vw;
         text-decoration: none;
-        font-size: calc(0.91rem + 0.28vw);
+        font-size: max(14px, calc(0.91rem + 0.28vw));
         display: block;
         font-weight: normal;
         font-family: "Krub";
@@ -360,7 +361,7 @@
     }
 
     .mobile-dropdown-container a {
-        font-size: calc(0.675rem + 0.18vw);
         padding-left: calc(1rem + 1.95vw);
+        font-size: max(10px, calc(0.675rem + 0.18vw));
     }
     }
