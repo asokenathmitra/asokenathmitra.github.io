@@ -11,16 +11,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A. N. Mitra Memorial Lecture Series</title>
-  <link rel="stylesheet" href="../static/css/navbar.css">
+  <link rel="stylesheet" href="../static/css/navbarR.css">
   <link rel="stylesheet" href="../static/css/home.css">
+  <script src="../static/js/navbarScript.js"></script>
 </head>
 <body>
     <div class="bg-color-layer"></div>
     <div class="background"></div>
+    
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="./home.html#!" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./register.html">Register</a>
+        </div>
+        <a href="./home.html#!" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
     <nav class="navbar">
         <div class="nav-links">
-            <a href="./home.html" class="nav-item">Home</a>
-            <a href="./about.html" class="nav-item">About</a>
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
 
         </div>
         <!--<div class="logo">Logo</div> -->
@@ -28,17 +47,25 @@
             <div class="dropdown">
                 <div class="dropbtn">Schedule ▾</div>
                 <div class="dropdown-content">
-                    <a href="./schedule.html">Day 1</a>
-                    <a href="./schedule.html">Day 2</a>
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
                     <a href="./WittenLecture.html">Ed Witten's Lecture</a>
                 </div>
             </div>
             <a href="./attendees.html" class="nav-item">Attendees</a>
-            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+            <a href="./register.html"> <button class="register-btn">Register</button></a>
+            <!-- <a href="/register" class="nav-item">Register</a> -->
+            <!-- <div class="dropdown">
+                <div class="dropbtn" style="padding-left: 0rem;"> &nbsp&nbsp▾&nbsp&nbsp </div>
+                <div class="dropdown-content">
+                    <a href="/attendees">Attendees</a>
+                </div>
+            </div> -->
         </div>
     </nav>
 
-    <div style="padding-top: 60px;"></div>
+    <div style="margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));"></div>
+    <!-- <div style="padding-top: 60px;"></div> -->
 
     <div class="hero anmitra">
         <!-- <div class="hero-image"> -->
@@ -59,7 +86,8 @@
 
             <div class="hero-text">
                 <div style="height: 4vw; aspect-ratio: 1;"></div>
-                <h1>A. N. Mitra Memorial Meeting and Lecture</h1>
+                <h1>A. N. Mitra Memorial <br> Meeting and Lecture</h1>
+                <!-- <h1>Asoke Nath Mitra <br>Memorial Meeting and Lecture</h1> -->
                 <div style="height: 1.5vw;"></div>
 
                 <p id="about-anmseries">In the loving memory of and as a tribute to the life and work of Prof. Asoke Nath Mitra, we are organizing this meeting and the second memorial lecture. Prof. Mitra's contributions to the field of High Energy and Nuclear Physics are recognised widely around the world and have inspired many generations of physicists.</p>
@@ -69,8 +97,8 @@
                 <p id="date-event">April 14<sup>th</sup>-15<sup>th</sup>, 2025</p>
                 <div style="width: 10vw;; display: inline-flex;"></div>
                 <div class="buttons" style="display: inline-flex; justify-content: space-between; align-content: right;">
-                    <a href="./schedule.html" class="type2">Meeting</a>
-                    <a href="./WittenLecture.html" class="type2">Lecture</a>
+                    <a href="./templates/schedule.html" class="type2">Meeting</a>
+                    <a href="./templates/WittenLecture.html" class="type2">Lecture</a>
                 </div>
                 <div style="height: 2vw;"></div>
             </div>
@@ -85,21 +113,21 @@
 
     <div class="hero witten">
         <div class="hero-text" style="color: white; vertical-align: top;">
-            <h1> 2<sup>nd</sup> A. N. Mitra Memorial Lecture</h1>
-
-            <p id="about-lecture">This memorial lecture will be delivered by Professor Edward Witten on the topic "A Background - Independent Algebra For Gravity". This is the second A. N. Mitra memorial lecture. The <a href="https://www.youtube.com/watch?v=4kn6BwdyA14">inaugural memorial lecture</a> was given by Prof. N. Panchapakesan on Apr 17, 2023, and was organized by the department of Physics, University of Delhi.</p>
+            <!-- <h1 style="color: rgb(233, 190, 0); font-weight: lighter;"> 2<sup>nd</sup> A. N. Mitra Memorial Lecture</h1> -->
+            <h1 style="color: rgb(233, 190, 0); font-weight: lighter; margin-bottom: 0; padding-bottom: 0;"> Edward Witten </h1> <h1 style="padding-top: 0; font-size: max(3vw, 20px); margin-top: 0; color: white">A. N. Mitra Memorial Lecture</h1>
+            <p id="about-lecture" style="color: rgb(255, 249, 199);">This memorial lecture will be delivered by Professor Edward Witten on the topic "A Background - Independent Algebra For Gravity". This is the second A. N. Mitra memorial lecture. The <a href="https://www.youtube.com/watch?v=4kn6BwdyA14">inaugural memorial lecture</a> was given by Prof. N. Panchapakesan on Apr 17, 2023, and was organized by the department of Physics, University of Delhi.</p>
 
             <div class="buttons" id="learn-more-lec-button">
-                <a href="./lecture" style="margin-top: 3vw;" class="type2">Learn More</a>
+                <a href="./templates/WittenLecture.html" style="margin-top: 3vw; color: #ff3864;" class="type2">Learn More</a>
                 <!-- <a href="/lecture" class="type1">Lecture</a> -->
             </div>
 
             <div class="circleWitten" id="inside">
-                <a href="./WittenLecture.html" title="Designed by Gayatri Misra"><img src="../static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
+                <a href="./templates/WittenLecture.html" title="Designed by Gayatri Misra"><img src="./static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
             </div>
         </div>
         <div class="circleWitten" id="outside">
-            <a href="./WittenLecture.html" title="Designed by Gayatri Misra"><img src="../static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
+            <a href="./templates/WittenLecture.html" title="Designed by Gayatri Misra"><img src="../static/images/lecturePoster.jpeg" alt="Professor Edward Witten"></a>
         </div>
     </div>
 
