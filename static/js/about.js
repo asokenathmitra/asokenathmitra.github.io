@@ -7,7 +7,9 @@ window.addEventListener('load', function () {
 
         // Show the main content
         const elements = document.getElementsByClassName('the-page');
+        console.log(elements);
         for (let i = 0; i < elements.length; i++) {
+            console.log("Removing ", elements[i]);
             elements[i].style.display = 'block';
         }
         // document.getElementsByClassName('the-page').style.display = 'none';

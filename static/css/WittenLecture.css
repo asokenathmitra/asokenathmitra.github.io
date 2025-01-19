@@ -63,6 +63,7 @@ body {
 /*        margin-bottom: 30px;*/
         width: 85%;
         color: black;
+        flex-direction: column; /*expt*/
     }
 
     .hero-text {
@@ -198,14 +199,16 @@ body {
             /*border-radius: 100%;*/
             display: flex;
             flex-direction: column;
-            width: 100%;
+/*            width: 100%;*/ /*old*/
+            width: 50%; /*expt*/
 /*            display: inline-block;*/
             position: relative;
             align-items: center;
         }
 
         .Witten img {
-            width: max(35vw, 300px);
+/*            width: max(35vw, 300px);*/ /*old*/
+            width: 100%; /*expt*/
 /*            border-radius: 5%;*/
 /*            margin-left: 10kiiiii889px;*/
             /*display: block;*/
@@ -219,7 +222,8 @@ body {
         }
         
         #witten-line {
-            width: max(35vw, 300px);
+/*            width: max(35vw, 300px);*/ /*old*/
+            width: 100%; /*expt*/
             align-content: flex-start;
             margin-top: 10px; 
             margin-bottom: 10px; 
@@ -227,7 +231,8 @@ body {
         }
 
         #date-time-lecture {
-            width: max(35vw, 300px);
+/*            width: max(35vw, 300px);*/ /*old*/
+            width: 100%; /*expt*/
             display: inline-flex; 
             align-items: center; 
             margin-left: 0px;
@@ -284,6 +289,7 @@ blockquote {
     width: 90%;
     margin-left: 0;
     margin: 10px auto;
+    margin-left: 0px; /*expt*/
     padding-left: 1em;
     border-left: 5px solid purple;
     font-family: "Krub";
