@@ -61,13 +61,14 @@ body {
         margin: auto;
         margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));
 /*        margin-bottom: 30px;*/
-        width: 85%;
+        width: 55%;
         color: black;
+        background: rgba(0, 0, 0, 0.5);
         flex-direction: column; /*expt*/
     }
 
     .hero-text {
-        max-width: 50%;
+        max-width: 100%;
         text-align: left;
     }
 
@@ -200,7 +201,7 @@ body {
             display: flex;
             flex-direction: column;
 /*            width: 100%;*/ /*old*/
-            width: 50%; /*expt*/
+            width: 100%; /*expt*/
 /*            display: inline-block;*/
             position: relative;
             align-items: center;
@@ -302,7 +303,8 @@ blockquote {
         .hero {
             flex-direction: column;
             margin-top: 75px;
-            width: 90%;
+            width: 85%;
+            background-color: rgba(0, 0, 0, 0);
         }
 
         .hero-text {

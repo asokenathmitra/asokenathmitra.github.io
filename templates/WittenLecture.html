@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="../static/css/footer.css">
     <script src="../static/js/navbarScript.js"></script>
     <script src="../static/js/about.js"></script>
+    <style type="text/css">
+        
+    svg {
+      position: absolute;
+    }
+    .string {
+      fill: none;
+      stroke: greenyellow;
+/*      stroke: tomato;*/
+      stroke-width: 5;
+    }
+    </style>
 </head>
 <body>
     <!-- Loading animation -->
@@ -63,9 +75,11 @@
         </div>
     </nav>
 
-    <div class="strings-bg">
-        
-    </div>
+    <!-- <div class="strings-bg" style="width: 100vw; height: 100vh; z-index: 0;">
+        <svg width="min(400px, 100%)" height="min(400px, 100%)">
+            <path id="loop" class="string"/>
+        </svg>
+    </div> -->
 
     <div class="hero">
         <div class="Witten" style="background: transparent;">
@@ -109,23 +123,68 @@
 
     
     <!-- Page Three: Join Section and Footer -->
-    <div id="page-three" class="the-page page-section page-three">
+    <div id="page-three" class="page-section page-three">
         <!-- Footer -->
         <footer>
             <div class="footer-bottom">
                 <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving memory of Professor Asoke Nath Mitra.</p>
                 <!-- email llink -->
 
-                <p>For queries, contact &nbsp;<a href="mailto:aalok.misra@ph.iitr.ac.in" style="color: cyan; text-decoration: none;"> aalok.misra@ph.iitr.ac.in</a>.</p>
-                <!-- <div class="footer-bottom-links">
-                    <a href="templates/about.html">About</a>
-                    <a href="templates/schedule.html">Events</a>
-                    <a href="templates/attendees.html">Attendees</a>
-                    <a href="templates/regForm.html">Register</a>
-                </div> -->
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;"> aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
             </div>
         </footer>
     </div>
 
+    <script>
+        const pi = Math.PI
+        const path = document.getElementById("loop");
+        const cx = 200, cy = 200, r = 100; // Center and radius
+        const amplitude = r/8; // Wiggle amplitude
+        let t = 0;
+
+        function waveLoop(ampList, wavelengthList, frequencyList) {
+          const newPath = Array.from({ length: 360 }, (_, i) => {
+            const angle = (i * Math.PI) / 180;
+            // const wiggle = amplitude * Math.sin(frequency * t + angle);
+
+            let wiggle_ = 0;
+            for (var m = ampList.length - 1; m >= 0; m--) {
+              a = ampList[m];
+              w = frequencyList[m];
+              k = wavelengthList[m];
+              wiggle_ = wiggle_ + a*Math.sin(k*angle-w*t);
+            };
+
+            const wiggle = amplitude * wiggle_;
+            // console.log('Wiggle1', wiggle1)
+
+            // const wiggle = amplitude * (
+            //   Math.sin(angle) -
+            //   1*Math.sin(2*angle-t) + 
+            //   0.25*Math.sin(3*angle-3*t) -
+            //   0.5*Math.sin(5*angle));
+            // console.log('wiggle2', wiggle);
+            
+            const x = cx + (r + wiggle) * Math.cos(angle);
+            const y = cy + (r + wiggle) * Math.sin(angle);
+            return `${i === 0 ? "M" : "L"} ${x} ${y}`;
+          }).join(" ") + " Z"; // Close the loop
+
+          path.setAttribute("d", newPath);
+          t += 0.05; // Increment time for continuous wiggling
+          requestAnimationFrame(() => waveLoop(ampList, wavelengthList, frequencyList));
+        }
+        console.log([1,2,3]);
+        let loopList = [
+            [[1,-0.8,0.25,-0.5], [1,2,3,5], [0,1,3,0]],
+
+        ];
+
+        for (var loopId = loopList.length - 1; loopId >= 0; loopId--) {
+            waveLoop(loopList[loopId][0], loopList[loopId][1], loopList[loopId][2]);
+            
+        };
+        // waveLoop([1,-0.8,0.25,-0.5], [1,2,3,5], [0,1,3,0]);
+    </script>
 </body>
 </html>
