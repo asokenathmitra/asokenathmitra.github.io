@@ -53,8 +53,8 @@ body {
     }
 
     #fillerbox {
-        width: 40%;
         height: auto;
+        width: 40%;
     }
 
     .hero {
@@ -287,7 +287,7 @@ t    }
         .hero {
             width: auto;
 /*            margin: auto;*/
-            height: 760px;
+/*            height: 760px;*/
             padding: 10px;
 /*            height: auto;*/
             flex-direction: column;
