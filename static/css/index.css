@@ -326,9 +326,9 @@ t    }
 
         .hero-text .buttons {
             align-items: self-start;
-            gap: 0px;
+/*            gap: 0px;*/
             margin: 10px auto;
-            width: 100%;
+            width: 65%;
         }
 
         #date-event {
