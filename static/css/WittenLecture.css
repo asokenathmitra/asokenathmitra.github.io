@@ -23,7 +23,8 @@ body {
     height: 100vh;
     padding: 0;
 /*    padding-top: 60px;*/
-    background: linear-gradient(135deg, #000000, #434343);
+/*    background: linear-gradient(135deg, #000000, #434343);*/
+    background: black;
     display: flex;
     flex-direction: column;
 }
@@ -249,6 +250,44 @@ body {
     font-family: "Krub";
     font-size: 1.2rem;
     line-height: 1.6rem;
+}
+
+q,
+blockquote {
+  quotes: "“" "”" "‘" "’";
+/*  font-style: italic;*/
+}
+
+.french {
+  quotes: "«" "»" "‹" "›";
+}
+
+q:before,
+blockquote:before {
+  content: open-quote;
+}
+
+q:after,
+blockquote:after {
+  content: close-quote;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  color: purple;
+  font-size: 3em;
+}
+
+blockquote {
+    width: 90%;
+    margin-left: 0;
+    margin: 10px auto;
+    padding-left: 1em;
+    border-left: 5px solid purple;
+    font-family: "Krub";
+    font-size: max(0.94vw, 12px);
 }
 
 

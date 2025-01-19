@@ -34,23 +34,7 @@
     const path = document.getElementById("loop");
     const cx = 200, cy = 200, r = 100; // Center and radius
     const amplitude = r/8; // Wiggle amplitude
-    const baseWavelength = 2*pi*r; // 
-    const frequency = 2*pi*r; // Wiggle frequency for wave-like effect
     let t = 0;
-
-    // function waveLoop() {
-    //   const newPath = Array.from({ length: 360 }, (_, i) => {
-    //     const angle = (i * Math.PI) / 180;
-    //     const wiggle = amplitude * Math.sin(frequency * t + angle); // Wave influence
-    //     const x = cx + (r + wiggle) * Math.cos(angle);
-    //     const y = cy + (r + wiggle) * Math.sin(angle);
-    //     return `${i === 0 ? "M" : "L"} ${x} ${y}`;
-    //   }).join(" ") + " Z"; // Close the loop
-
-    //   path.setAttribute("d", newPath);
-    //   t += 0.05; // Increment time for continuous wiggling
-    //   requestAnimationFrame(waveLoop);
-    // }
 
     function waveLoop(ampList, wavelengthList, frequencyList) {
       const newPath = Array.from({ length: 360 }, (_, i) => {
@@ -58,21 +42,22 @@
         // const wiggle = amplitude * Math.sin(frequency * t + angle);
 
         let wiggle_ = 0;
-        for (var i = ampList.length - 1; i >= 0; i--) {
-          a = ampList[i];
-          w = frequencyList[i];
-          k = wavelengthList[i];
+        for (var m = ampList.length - 1; m >= 0; m--) {
+          a = ampList[m];
+          w = frequencyList[m];
+          k = wavelengthList[m];
           wiggle_ = wiggle_ + a*Math.sin(k*angle-w*t);
         };
 
         const wiggle = amplitude * wiggle_;
+        // console.log('Wiggle1', wiggle1)
 
         // const wiggle = amplitude * (
         //   Math.sin(angle) -
         //   1*Math.sin(2*angle-t) + 
         //   0.25*Math.sin(3*angle-3*t) -
         //   0.5*Math.sin(5*angle));
-        // console.log(wiggle);
+        // console.log('wiggle2', wiggle);
         
         const x = cx + (r + wiggle) * Math.cos(angle);
         const y = cy + (r + wiggle) * Math.sin(angle);
@@ -81,10 +66,10 @@
 
       path.setAttribute("d", newPath);
       t += 0.05; // Increment time for continuous wiggling
-      requestAnimationFrame(waveLoop);
+      requestAnimationFrame(() => waveLoop(ampList, wavelengthList, frequencyList));
     }
-
-    waveLoop([1,-1,0.25,0.5], [1,2,3,5], [0,1,3,0]);
+    console.log([1,2,3])
+    waveLoop([1,-0.8,0.25,-0.5], [1,2,3,5], [0,1,3,0]);
   </script>
 </body>
 </html>
