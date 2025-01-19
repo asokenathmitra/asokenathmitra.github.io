@@ -174,7 +174,8 @@ li a {
 
 #source-citation {
     font-family: Krub;
-    padding-top: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
     /* font-weight: bold; */
     text-align: left;
     font-size: max(0.8vw, 14px);
