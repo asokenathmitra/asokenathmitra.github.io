@@ -112,8 +112,13 @@
         <textarea id="comments" name="comments" rows="4"></textarea>
     </div>
 
-    <button type="submit" class="submit-btn">Register</button>
+    <button type="submit" id="submitbutton" class="submit-btn">Register</button>
 </form>
+
+    <!-- Submitting animation -->
+    <div id="submitting">
+        <img src="../static/gifs/3bodyAnim.gif" alt="submeeting...">
+    </div>
 
 <!-- Page Three: Join Section and Footer -->
     <div id="page-three" class="page-section page-three">
@@ -141,6 +146,11 @@
         // Gather form data
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
+        
+        document.getElementById('submitbutton').disabled = true;
+        document.getElementById('submitting').style.display = 'flex';
+
+        console.log("disabled");
 
         try {
             // Send form data to the server
@@ -159,6 +169,10 @@
             console.error('Error:', error);
             alert('An error occurred. Please try again.');
         }
+
+        document.getElementById('submitbutton').disabled = false;
+        document.getElementById('submitting').style.display = 'none';
+        console.log("enabled");
     });
 
     // Show/hide "Other" input fields based on selection
