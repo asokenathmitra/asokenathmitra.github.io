@@ -273,6 +273,28 @@
             background-color: rgb(90, 90, 90);
         }
 
+        .card.chair {
+            font-family: "Krub";
+            font-size: calc(0.5*(2.25rem + 1.5625vw));
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background-color: rgb(90, 90, 90);
+        }
+
+        .card.chair a {
+            text-decoration: none;
+            color: rgb(241, 205, 0);
+            transition: all 0.2s;
+        }
+
+        .card.chair a:hover {
+            color: #007bff;
+        }
+
+        .card.chair a:active {
+            color: #ff0000;
+        }
+
         .card#Reminiscences, .card#Witten {
             filter: drop-shadow(0rem 0rem 20px rgb(233, 190, 0));
             /* filter: drop-shadow(0rem 0rem 20px #da4968); */
