@@ -1,0 +1,833 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule of Talks</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/schedule.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/navbarScript.js"></script>
+    <!-- <link rel="stylesheet" type="../text/css" href=""> -->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                    <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+            <!-- <a href="/register" class="nav-item">Register</a> -->
+            <!-- <div class="dropdown">
+                <div class="dropbtn" style="padding-left: 0rem;"> &nbsp&nbsp▾&nbsp&nbsp </div>
+                <div class="dropdown-content">
+                    <a href="/attendees">Attendees</a>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./regForm.html">Register</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <div class="bg-image-layer"></div>
+    <div class="bg-color-layer"></div>
+    <div class="main-container">
+        <div class="header">
+            <div class="title">Schedule of Talks</div>
+            <div class="day-links">
+                <a href="schedule.html#day-1" onclick="goToCard(0);" id="btn-1" class="day-btn active">Day-1 (Apr 14,
+                    2025)</a>
+                <a href="schedule.html#day-2" onclick="goToCard(1);" id="btn-2" class="day-btn">Day-2 (Apr 15, 2025)</a>
+            </div>
+        </div>
+
+        <ul class="cards" id="schedule-container">
+            <li class="cards-container" id="day_1">
+                <div class="card schedule-header">
+                    <div class="date">Day-1: April 14, 2025</div>
+                    <div class="time-range">9:00 AM - 7:00 PM IST</div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://www.manipuruniv.ac.in/faculty/128">Ngangkham Nimai Singh</a>
+                    <!--Chair: <a target="_blank" href="https://www.pnw.edu/people/neeti-parashar-ph-d/">Neeti Parashar</a>-->
+                    <br>(9:00 AM - 12:00 PM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://fellows.ias.ac.in/profile/v/FL1988014">Natarajan
+                                Panchapakesan</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Opening remarks , Black hole normal modes</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 9:00 - 9:30 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84296657227?pwd=hoqNvckpjozH5ZCpUNVa9kjlzasjLk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/2JFhzodyM2c?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://fellows.ias.ac.in/profile/v/FL1984005">Harihara Subra
+                                Mani</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Quantum Thermodynamics of Small Systems: The Anyonic Otto Engine</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 9:30 - 10:00 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84296657227?pwd=hoqNvckpjozH5ZCpUNVa9kjlzasjLk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/2JFhzodyM2c?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://nasi.org.in/fellows/dass-n-d-hari/">N. D. Hari Dass </a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>QCD Strings and Effective String Theories</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 10:00 - 10:30 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84296657227?pwd=hoqNvckpjozH5ZCpUNVa9kjlzasjLk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/2JFhzodyM2c?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="javascript:void(0);">Dayanand Parashar</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Formulation of Dirac Equation in Curved Spacetime</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 10:30 - 11:00 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84296657227?pwd=hoqNvckpjozH5ZCpUNVa9kjlzasjLk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/2JFhzodyM2c?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://physics.puchd.ac.in/faculty/cv/mmgupta-2014.pdf">Manmohan
+                                Gupta </a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Quark Dynamics to Flavor Dynamics : a la Mitra</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 11:00 - 11:30 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84296657227?pwd=hoqNvckpjozH5ZCpUNVa9kjlzasjLk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/2JFhzodyM2c?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/T._V._Ramakrishnan">Tiruppattur
+                                Venkatachalamurti Ramakrishnan</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>The ‘Un'free Electron Limit for Metals</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 11:30 AM- 12:00 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84296657227?pwd=hoqNvckpjozH5ZCpUNVa9kjlzasjLk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/2JFhzodyM2c?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card interval">
+                    Lunch Break: 12:00 PM - 2:45 PM IST
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank"
+                        href="https://डीयू.विद्या.भारत/uploads/du/Faculty%20CV/Physics%20-%20Astrophysics/Physics_Nivedita_Deo.pdf">Nivedita
+                        Deo</a> <br>(2:45 PM - 3:45 PM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://www.researchgate.net/profile/Shashank-Bhatnagar-3">Shashank
+                                Bhatnagar</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Exclusive processes at B- factories in the framework of Bethe
+                            Salpeter equation</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 2:45 – 3:15 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84020260644?pwd=g6ncelmj2gwpD38LI1zaW5MzjwxdC7.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/osbs-gBPQJ0?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank"
+                                href="https://www.linkedin.com/in/prof-satendra-sharma-4a400950/?originalSubdomain=ng">
+                                Satendra Sharma</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Nuclear Structure and IBM</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 3:15 – 3:45 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84020260644?pwd=g6ncelmj2gwpD38LI1zaW5MzjwxdC7.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/osbs-gBPQJ0?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card interval">
+                    Coffee Break: 3:45 PM - 4:15 PM IST
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://www.iitr.ac.in/~PH/aalokfph">Aalok Misra</a> <br>(4:15 PM -
+                    4:45 PM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Muthusamy_Lakshmanan"> Muthusamy
+                                Lakshmanan</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Reservoir Computing with Logistic Map</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 4:15 – 4:45 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84020260644?pwd=g6ncelmj2gwpD38LI1zaW5MzjwxdC7.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/osbs-gBPQJ0?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://nasi.org.in/fellows/dass-n-d-hari/">N. D. Hari Dass </a>
+                    <!--Chair: <a target="_blank" href="https://www.manipuruniv.ac.in/faculty/128">Ngangkham Nimai Singh</a>-->
+                    <!--Chair: <a href="javascript:void(0);">to be declared</a>-->
+                    <br>(4:45 PM - 6:30 PM IST)
+                </div>
+
+                <div class="card" id="Reminiscences">
+                    <div class="speaker">
+                        <p id="rem-time">
+                            <a target="_blank" href="https://en.wikipedia.org/wiki/Kalyan_Bidhan_Sinha">Kalyan
+                                Sinha</a> (4:45-5:00 PM) <br>
+                            <a target="_blank" href="https://en.wikipedia.org/wiki/Amitava_Raychaudhuri">Amitava
+                                Raychaudhuri</a> (5:00-5:15 PM) <br>
+                            <a target="_blank"
+                                href="https://gauhati.ac.in/member/science/physics/dilip-kumar-choudhury">Dilip K.
+                                Choudhury</a> (5:15-5:30 PM) <br>
+                            <!-- <a href="javascript:void(0);">Gargi Mitra Delmotte</a>, -->
+                            <a target="_blank"
+                                href="https://inspirehep.net/authors/1063472?ui-citation-summary=true">Wasi Haider</a>
+                            (5:30-5:45 PM)
+                            <br>
+                            <!-- <a target="_blank" href="https://www.imsc.res.in/romesh_k_kaul">Romesh Kaul</a>, -->
+                            <a target="_blank" href="https://scholar.google.co.in/citations?user=XZPZpasAAAAJ&hl=en">R.
+                                S.
+                                Kaushal</a> (5:45-6:00 PM) <br>
+                            <a target="_blank" href="https://scholar.google.com/citations?user=oZMV0R4AAAAJ&hl=en">Gargi
+                                Mitra-Delmotte</a> (6:00-6:15 PM) <br>
+                            <!--<a href="javascript:void(0);">others(TBA)</a>-->
+                        </p>
+                    </div>
+                    <div class="topic" style="display: inline-flex; vertical-align: middle;">
+                        <p id="remtit"><strong>Title: </strong>Prof. Asoke Nath Mitra Reminiscences Session</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 4:45 – 6:30 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84020260644?pwd=g6ncelmj2gwpD38LI1zaW5MzjwxdC7.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/osbs-gBPQJ0?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank"
+                        href="https://www.tifr.res.in/~dnap/high-energy-gamma-ray-lab.html">Indranil Mazumdar</a>
+                    <br>(6:30 PM - 7:00 PM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://www.lsu.edu/physics/people/faculty/rau.php"> A. Ravi P.
+                                Rau</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Varied binding of three bodies in atoms and nuclei Map</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>14 April 2025, 6:30 – 7:00 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/84020260644?pwd=g6ncelmj2gwpD38LI1zaW5MzjwxdC7.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/osbs-gBPQJ0?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card interval">
+                    End of Day-1
+                </div>
+            </li>
+            <li class="cards-container" id="day_2">
+                <div class="card schedule-header">
+                    <div class="date">Day-2: April 15, 2025</div>
+                    <div class="time-range">8:30 AM - 8:00 PM IST</div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://kmc.du.ac.in/research/faculty/pdf/151/----------">Usha
+                        Kulshreshtha</a> <br>(8:30 AM - 9:30 AM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/James_P._Vary"> James Vary</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Ab Initio Approach to Hadrons and Nuclei</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 8:30 – 9:00 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://profiles.stanford.edu/stanley-brodsky"> Stanley J.
+                                Brodsky</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Recent Advances in Light Front Physics</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 9:00 – 9:30 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://www.researchgate.net/profile/Amitabha-Mukherjee">Amitabha
+                        Mukherjee</a> <br>(9:30 AM - 10:30 AM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Naresh_Dadhich"> Naresh Dadhich</a>
+                        </p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Geometry driven dynamics of the fundamental forces </p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 9:30 – 10:00 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Mohammad_Sami_(professor)">Mohammad
+                                Sami</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Standard model of universe; successes and challenges</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 10:00 – 10:30 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://www.researchgate.net/profile/V-Bhasin">V. S. Bhasin</a>
+                    <br>(10:30 AM - 11:30 AM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank"
+                                href="https://www.tifr.res.in/dnap/high-energy-gamma-ray-lab.html">Indranil Mazumdar</a>
+                        </p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>To Fuse or Not to Fuse: A Tale of Two Nuclei</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 10:30 – 11:00 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank"
+                                href="https://www.du.ac.in/du/uploads/departments/faculty_members/Physics_Astrophysics/3054.pdf">Brajesh
+                                Choudhary</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>India’s contributions to the LHC and the CMS experiment</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 11:00 – 11:30 AM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="http://sites.iiserpune.ac.in/~bhalerao/Home.html">R. Bhalerao</a>
+                    <br>(11:30 AM - 12:30 PM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Ajoy_Ghatak">Ajoy Ghatak</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Polarization of Light, Entanglement & Bell’s Inequality</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 11:30 – 12:00 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://researchers.adelaide.edu.au/profile/anthony.thomas">Anthony
+                                William Thomas</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Are the results of effective field theory really model independent:
+                            insight from few-body systems</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 12:00 – 12:30 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/89149855475?pwd=bmN6GMdvvJFJiEgo6QlUMJIjJaupLQ.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/P43B9nBOQlE?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card interval">
+                    Lunch Break: 12:30 PM - 3:30 PM IST
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank"
+                        href="https://डीयू.विद्या.भारत/uploads/du/Faculty%20CV/Physics%20-%20Astrophysics/Sanjay_Jain_Physics.pdf">Sanjay
+                        Jain</a> <br>(3:30 PM - 5:30 PM IST)
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Jutta_Kunz">Jutta Kunz</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Ringdown of Rotating Black Holes</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 3:30 – 4:00 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/83314260268?pwd=zAieYFhAza1IRXwXl8QkqBywfDMQKk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/QMYyejvIsvI?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank"
+                                href="https://www.du.ac.in/du/uploads/departments/faculty_members/Physics_Astrophysics/2884.pdf">Daya
+                                Shankar Kulshreshtha</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Boson Stars</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 4:00 – 4:30 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/83314260268?pwd=zAieYFhAza1IRXwXl8QkqBywfDMQKk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/QMYyejvIsvI?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://www.researchgate.net/profile/Patrick-Das-Gupta">Patrick Das
+                                Gupta</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Quantum Shardula, Measurement Problem and Gravitational Wave
+                            Detection</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 4:30 – 5:00 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/83314260268?pwd=zAieYFhAza1IRXwXl8QkqBywfDMQKk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/QMYyejvIsvI?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://inspirehep.net/authors/2274471?ui-citation-summary=true">J.
+                                D. Anand</a></p>
+                    </div>
+                    <div class="topic">
+                        <p><strong>Title: </strong>Neutron Stars</p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025, 5:00 – 5:30 PM IST</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/83314260268?pwd=zAieYFhAza1IRXwXl8QkqBywfDMQKk.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/QMYyejvIsvI?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>N.A.</p>
+                    </div>
+                </div>
+
+                <div class="card interval">
+                    Coffee Break: 5:30 PM - 6:15 PM IST
+                </div>
+
+                <div class="card chair">
+                    Chair: <a target="_blank" href="https://www.iitr.ac.in/~PH/aalokfph">Aalok Misra</a> <br>(6:30 PM -
+                    8:00 PM IST)
+                </div>
+
+                <div class="card" id="Witten">
+                    <div class="speaker">
+                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Edward_Witten">Edward Witten</a></p>
+                    </div>
+                    <!-- <div class="topic"><p><strong>Title: </strong><a href="./WittenLecture.html" id="wittit">A.N. Mitra Memorial Lecture - Algebras in Field Theory and Gravity: An Overview</a></p></div> -->
+                    <div class="topic">
+                        <p><strong>Title: </strong><a href="./WittenLecture.html" id="wittit">A Background Independent
+                                Algebra for Gravity</a></p>
+                    </div>
+                    <div class="time">
+                        <p><strong>Time: </strong>15 April 2025</p>
+                        <!-- <p>6:15 – 6:30 PM IST: A brief introduction to the event and the speaker</p> -->
+                        <p>6:30 - 8:00 PM IST: Lecture</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://us06web.zoom.us/j/85893056659?pwd=vmAIJXPm58nW0sPPesmbcZeDu01R6e.1"
+                            class="meeting">Meeting Link</a>
+                        <a href="https://youtube.com/live/ar83tDZ7g4k?feature=share" class="youtube">YouTube Link</a>
+                        <a href="javascript:void(0);" class="lecture">Lecture File</a>
+                    </div>
+                    <div class="abstract">
+                        <button onclick="toggleAbstract(this)">View Abstract</button>
+                        <p><b>Abstract: </b>I consider the algebra of observables along the world-line of an observer as
+                            a background independent algebra in quantum gravity.</p>
+                    </div>
+                </div>
+
+                <div class="card interval">
+                    End of Day-2
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving
+                    memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;">
+                        aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+                <!-- <div class="footer-bottom-links">
+                    <a href="templates/about.html">About</a>
+                    <a href="templates/schedule.html">Events</a>
+                    <a href="templates/attendees.html">Attendees</a>
+                    <a href="templates/regForm.html">Register</a>
+                </div> -->
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const cardContainer = document.getElementById('schedule-container');
+        const cards = document.querySelectorAll('.cards-container');
+
+        //let currentIndex = 0;
+
+        function toggleAbstract(button) {
+            const abstractText = button.nextElementSibling;
+            const isHidden = abstractText.style.display === 'none';
+            abstractText.style.display = isHidden ? 'block' : 'none';
+            button.textContent = isHidden ? 'Hide Abstract' : 'View Abstract';
+        }
+
+        function updateIndicator(active_btn, inactive_btn) {
+            const day_button_active = document.getElementById(active_btn);
+            const day_button_inactive = document.getElementById(inactive_btn);
+
+            day_button_active.classList.add('active')
+            day_button_inactive.classList.remove('active')
+        }
+
+        // Function to go to a specific card
+        function goToCard(index) {
+            currentIndex = index;
+            const cardWidth = cards[0].offsetWidth + document.documentElement.clientWidth;
+            cardContainer.scrollTo({
+                left: cardWidth * currentIndex,
+                behavior: 'smooth'
+            });
+
+            let btn_id_a = "";
+            let btn_id_i = "";
+
+            if (index == 1) {
+                btn_id_a = "btn-2";
+                btn_id_i = "btn-1";
+            }
+            else {
+                btn_id_a = "btn-1";
+                btn_id_i = "btn-2";
+            }
+            updateIndicator(btn_id_a, btn_id_i);
+        }
+
+        let current_url = window.location.href;
+        if (current_url.search("#day-2") >= 0) {
+            goToCard(1);
+        }
+        else {
+            goToCard(0);
+        }
+    </script>
+</body>
+
+</html>
