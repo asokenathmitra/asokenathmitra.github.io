@@ -352,6 +352,11 @@
             transition: all 0.2s;
         }
 
+        .card .speaker .cancelled a {
+            font-size: 1.5em;
+            color: rgb(150, 125, 44);
+        }
+
 
         @media only screen and (max-device-width: 600px) {
             .bg-image-layer {
