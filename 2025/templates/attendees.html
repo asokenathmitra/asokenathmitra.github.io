@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="../static/css/footer.css">
     <script src="../static/js/navbarScript.js"></script>
 </head>
+
 <body>
 
     <!-- Navigation bar -->
@@ -29,7 +31,7 @@
                 <a href="./WittenLecture.html">Ed Witten's Lecture</a>
             </div>
             <a href="./attendees.html">Attendees</a>
-            <a href="./regForm.html">Register</a>
+            <a href="javascript:void(0);">Register</a>
         </div>
         <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
     </div>
@@ -51,7 +53,7 @@
                 </div>
             </div>
             <a href="./attendees.html" class="nav-item">Attendees</a>
-            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+            <a href="javascript:void(0);"> <button class="register-btn">Register</button></a>
         </div>
     </nav>
 
@@ -65,13 +67,14 @@
         <div class="background"></div>
         <header>
             <h1>Registered Participants</h1>
-            
+
             <div class="search-filter-container">
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search by name...">
                     <button class="search-btn">
                         <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/>
+                            <path fill="currentColor"
+                                d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
                         </svg>
                     </button>
                 </div>
@@ -128,15 +131,17 @@
     </div>
 
 
-<!-- Page Three: Join Section and Footer -->
+    <!-- Page Three: Join Section and Footer -->
     <div id="page-three" class="page-section page-three">
         <!-- Footer -->
         <footer>
             <div class="footer-bottom">
-                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving memory of Professor Asoke Nath Mitra.</p>
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving
+                    memory of Professor Asoke Nath Mitra.</p>
                 <!-- email llink -->
 
-                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;"> aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;">
+                        aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
                 <!-- <div class="footer-bottom-links">
                     <a href="templates/about.html">About</a>
                     <a href="templates/schedule.html">Events</a>
@@ -146,7 +151,7 @@
             </div>
         </footer>
     </div>
-    
+
 
     <script>
         // Fetch and populate table from Google Sheets
@@ -183,7 +188,7 @@
                         <td>${institute || 'Unknown'}</td>
                     `;
 
-                        // <td>${domain || 'Not Specified'}</td>
+                    // <td>${domain || 'Not Specified'}</td>
 
                     tableBody.appendChild(tr);
                 });
@@ -221,7 +226,7 @@
         }
 
         // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function() {
+        document.getElementById('searchInput').addEventListener('input', function () {
             const searchTerm = this.value.toLowerCase();
             const rows = document.querySelectorAll('#participantsTableBody tr');
 
@@ -233,7 +238,7 @@
 
         // Filter functionality
         document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
@@ -251,4 +256,5 @@
 
     </script>
 </body>
+
 </html>
