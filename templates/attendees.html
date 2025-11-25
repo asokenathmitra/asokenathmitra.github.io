@@ -28,7 +28,9 @@
             <div class="mobile-dropdown-container" id="mobile-drop-container">
                 <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
                 <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
-                <a href="./WittenLecture.html">Ed Witten's Lecture</a>
+                <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+                <a href="./PranNathLecture.html">Pran Nath's Lecture</a>
             </div>
             <a href="./attendees.html">Attendees</a>
             <a href="./regForm.html">Register</a>
@@ -166,7 +168,7 @@
         // Fetch and populate table from Google Sheets
         async function loadParticipants() {
             const spreadsheetId = '1Mj9umsd-U_GgM2eeA1lodPRG999AkykiiPhRxODz-_0';
-            const rangeName = 'A2:G'; // Adjust the range to match your data
+            const rangeName = 'A171:H'; // Adjust the range to match your data
             const apiKey = 'AIzaSyBBJrEbbMahFEH_7tb5qVCMxWcxGSTxLg4'; // Replace with your actual API key
             const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeName}?key=${apiKey}`;
 

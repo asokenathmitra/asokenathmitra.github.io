@@ -1,0 +1,106 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/regSuccess.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/navbarScript.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="../2025/index.html">2025</a>
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./regForm.html">Register</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+
+            <div class="dropdown">
+                <div class="dropbtn">Editions ▾</div>
+                <div class="dropdown-content">
+                    <a href="../2025/index.html"> 2025 (Edition 1) </a>
+                    <a href="../index.html"> 2026 (Edition 2) </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                    <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                    <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+                    <a href="./PranNathLecture.html">Pran Nath's Lecture</a>
+                </div>
+                <a href="./attendees.html" class="nav-item">Attendees</a>
+                <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+            </div>
+    </nav>
+
+    <div class="background"></div>
+    <div class="success-container">
+        <div class="card">
+            <div class="icon">
+                <i class="checkmark">✓</i>
+            </div>
+            <h1>Registration Successful</h1>
+            <p>Thank you for registering! We're excited to have you on board.</p>
+            <a href="/" class="button">Go to Homepage</a>
+        </div>
+    </div>
+
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="the-page page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving
+                    memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;">
+                        aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+                <!-- <div class="footer-bottom-links">
+                    <a href="templates/about.html">About</a>
+                    <a href="templates/schedule.html">Events</a>
+                    <a href="templates/attendees.html">Attendees</a>
+                    <a href="templates/regForm.html">Register</a>
+                </div> -->
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
