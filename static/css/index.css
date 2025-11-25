@@ -1,27 +1,29 @@
     body {
         margin: auto;
-    /*    margin-top: 60px;*/
-    /*    display: flex;*/
+        /*    margin-top: 60px;*/
+        /*    display: flex;*/
     }
 
     .bg-color-layer {
-        position: fixed; 
+        position: fixed;
 
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         /* background-color: #A0A0A0; /* #624664; #554156 */
-        background-color: rgba(133, 91, 13, 0.375); /* Adjust the color and opacity as needed */
+        background-color: rgba(133, 91, 13, 0.375);
+        /* Adjust the color and opacity as needed */
         opacity: 0.88;
-        z-index: -10; 
+        z-index: -10;
         margin: 0vw;
         padding: 0vw;
     }
 
 
     .background {
-        position: fixed; /* Ensures it stays behind content */
+        position: fixed;
+        /* Ensures it stays behind content */
         top: 0;
         left: 0;
         width: 100%;
@@ -29,14 +31,15 @@
         padding-left: 8.36vw;
         background-image: url("../images/bgFinal.jpg");
         opacity: 0.5;
-    /*    background-repeat: no-repeat;*/
+        /*    background-repeat: no-repeat;*/
         background-size: cover;
         background-position: center;
         filter: blur(2px);
-        z-index: -100; /* Places it behind other content */
+        z-index: -100;
+        /* Places it behind other content */
     }
 
-/* Hero text */
+    /* Hero text */
     .biggerContainer-desktop {
         /*z-index: 1;*/
         background-image: url("../images/anmitrahome1.png");
@@ -46,7 +49,8 @@
         background-size: cover;
         margin: 0;
         width: 100%;
-        height: 40vw; /*80vh*/
+        height: 40vw;
+        /*80vh*/
         /* box-shadow: 0 0 50px 10px #00000030; */
         display: flex;
         /*flex-wrap: wrap;*/
@@ -60,7 +64,8 @@
         background-repeat: no-repeat;
         background-size: auto 100%;
         margin: auto;
-        /*height: 40vw;*/ /*80vh*/
+        /*height: 40vw;*/
+        /*80vh*/
         /* box-shadow: 0 0 50px 10px #00000030; */
         display: flex;
         /*flex-wrap: wrap;*/
@@ -73,15 +78,16 @@
 
     .hero {
         display: flex;
-        /*height: 30vw;*/ /*80vh*/
+        /*height: 30vw;*/
+        /*80vh*/
         /*background-color: #554156;*/
         justify-content: space-between;
         align-items: center;
-        padding: 1.04vw 1.04vw; 
+        padding: 1.04vw 1.04vw;
         margin: 3.14vw 5.23vw;
         color: black;
-/*        flex-direction: column;*/
-/*        flex-wrap: wrap;*/
+        /*        flex-direction: column;*/
+        /*        flex-wrap: wrap;*/
     }
 
     .anmitra-desktop {
@@ -96,7 +102,7 @@
     }
 
     .witten {
-        border-radius: 1.04vw; 
+        border-radius: 1.04vw;
         /* 29, 29, 29, 0.5  85, 65, 86, 1 */
         /* background-color: rgba(00, 60, 60, 0.87);  */
         background-color: #4d6f69dd;
@@ -108,7 +114,7 @@
         display: flex;
     }
 
-    .hero-text { 
+    .hero-text {
         width: 60%;
         max-width: 60%;
         text-align: left;
@@ -119,7 +125,7 @@
         /*align-content: right;*/
     }
 
-    .hero-text#anmitra-text-desktop { 
+    .hero-text#anmitra-text-desktop {
         width: 100%;
         max-width: 100%;
         text-align: left;
@@ -132,7 +138,8 @@
     }
 
     .hero-text h1 {
-        font-size: max(3.6vw, 24px); /*56*/
+        font-size: max(3.6vw, 24px);
+        /*56*/
         font-family: "Lora";
         font-weight: normal;
         margin-bottom: 1.04vw;
@@ -157,8 +164,11 @@
         gap: 0.78vw;
         border-color: black;
         border-width: 0.26vw;
-        justify-content: flex-start;display: inline-flex; justify-content: space-between; align-content: righ
-t    }
+        justify-content: flex-start;
+        display: inline-flex;
+        justify-content: space-between;
+        align-content: right
+    }
 
     .hero-text .buttons a {
         text-decoration: none;
@@ -170,6 +180,12 @@ t    }
         font-size: max(1.36vw, 12px);
         font-weight: normal;
     }
+
+    #lecture-button {
+        padding: 10% 20%;
+    }
+
+
 
     #learn-more-lec-button {
         order: 3;
@@ -208,13 +224,15 @@ t    }
         color: #333;
     }
 
+
     .hero-text .buttons .type2:hover {
         background-color: #000;
         color: #fff;
     }
 
     .hero-image {
-        /*max-width: 40%;*/ /*40*/
+        /*max-width: 40%;*/
+        /*40*/
         padding: 1.31vw;
         padding-left: 0vw;
         padding-right: 2.61vw;
@@ -222,7 +240,8 @@ t    }
 
     .hero-image img {
         width: 35vw;
-        border-radius: 26.14vw; /*30px*/
+        border-radius: 26.14vw;
+        /*30px*/
         background-image: radial-gradient(circle 50vw at 50% 100%, #a0a0a0, #a0a0a0);
         /*background-image: radial-gradient(circle closest-side, #a0a0a0, #a0a0a0);*/
         /*border: 1px solid #333;*/
@@ -239,16 +258,17 @@ t    }
     }
 
     #date-event-desktop {
-        font-size: calc(2.69px + 1.613vw); /*max(1.8vw, 20px); */
-        font-family: Lora; 
+        font-size: calc(2.69px + 1.613vw);
+        /*max(1.8vw, 20px); */
+        font-family: Lora;
         color: white;
         display: inline-flex;
         margin: 0;
     }
 
     #date-event-mobile {
-        font-size: max(1.8vw, 20px); 
-        font-family: Lora; 
+        font-size: max(1.8vw, 20px);
+        font-family: Lora;
         color: white;
         display: inline-flex;
     }
@@ -273,17 +293,17 @@ t    }
     #about-lecture a {
         text-decoration: none;
         color: #ffd000;
-       /* font-weight: bold; */
+        /* font-weight: bold; */
         /*white-space: nowrap;*/
     }
 
     #about-lecture a:hover {
         border-radius: 5px;
-/*        background-color: #ff3864;*/
+        /*        background-color: #ff3864;*/
         color: #ff3864;
-/*        font-size: max(0.9vw, 12px);;*/
+        /*        font-size: max(0.9vw, 12px);;*/
         padding: 2px;
-/*        margin-bottom: 5px;*/
+        /*        margin-bottom: 5px;*/
     }
 
     #anmitra-lecture-title {
@@ -291,45 +311,47 @@ t    }
     }
 
     /* Professor Mitra */
-        .circle {
-            border-radius: 50%;
-            display: inline-block;
-            position: relative;
-        }
-        .circle img {
-            width: 40vw;
-            border-radius: 50%;
-            display: block;
-            border:0.05vw solid #A0A0A0;
-        }
+    .circle {
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+    }
+
+    .circle img {
+        width: 40vw;
+        border-radius: 50%;
+        display: block;
+        border: 0.05vw solid #A0A0A0;
+    }
 
     /* Professor Witten */
-        .circleWitten {
-            /*border-radius: 100%;*/
-            display: inline-block;
-            position: relative;
-        }
-        .circleWitten img {
-/*            min-width: 400px;*/
-            width: 30vw;
-            border-radius: 1%;
-            margin-left: 0.52vw;
-            /*display: block;*/
-            /*border:1px solid #A0A0A0;*/
-        }
-    
+    .circleWitten {
+        /*border-radius: 100%;*/
+        display: inline-block;
+        position: relative;
+    }
+
+    .circleWitten img {
+        /*            min-width: 400px;*/
+        width: 30vw;
+        border-radius: 1%;
+        margin-left: 0.52vw;
+        /*display: block;*/
+        /*border:1px solid #A0A0A0;*/
+    }
+
     #inside {
         display: none;
     }
 
 
-/* Smooth Scrolling */
+    /* Smooth Scrolling */
     html {
         scroll-behavior: smooth;
     }
 
 
-/* Responsiveness*/
+    /* Responsiveness*/
     @media (max-width: 768px) {
         * {
             text-align: center;
@@ -355,10 +377,10 @@ t    }
 
         .hero {
             width: auto;
-/*            margin: auto;*/
-/*            height: 760px;*/
+            /*            margin: auto;*/
+            /*            height: 760px;*/
             padding: 10px;
-/*            height: auto;*/
+            /*            height: auto;*/
             flex-direction: column;
             text-align: center;
             flex-wrap: wrap;
@@ -371,21 +393,21 @@ t    }
         }
 
         .biggerContainer-mobile {
-    /*        z-index: 1;*/
+            /*        z-index: 1;*/
             width: 80%;
             background-image: none;
-/*            opacity: 1;*/
-/*            background-repeat: no-repeat;*/
-/*            background-size: 100% auto;*/
-    /*        height: 100%;*/
-/*            display: flex;*/
+            /*            opacity: 1;*/
+            /*            background-repeat: no-repeat;*/
+            /*            background-size: 100% auto;*/
+            /*        height: 100%;*/
+            /*            display: flex;*/
             flex-direction: column;
-/*            flex-wrap: wrap;*/
+            /*            flex-wrap: wrap;*/
             align-items: center;
         }
 
         #fillerbox-mobile {
-/*            width: 50%;*/
+            /*            width: 50%;*/
             background-image: url("../images/anmitra2.png");
             background-size: cover;
             border-radius: 50%;
@@ -395,7 +417,7 @@ t    }
 
         .hero-text .buttons {
             align-items: self-start;
-/*            gap: 0px;*/
+            /*            gap: 0px;*/
             margin: 10px auto;
             width: 65%;
         }
@@ -411,9 +433,9 @@ t    }
             max-width: 100%;
             margin: auto;
             padding: 0;
-/*            display: flex;*/
-/*            flex-direction: column;*/
-/*            flex-wrap: wrap;*/
+            /*            display: flex;*/
+            /*            flex-direction: column;*/
+            /*            flex-wrap: wrap;*/
             align-items: center;
         }
 
@@ -448,15 +470,15 @@ t    }
         }
 
         .circleWitten img {
-/*            min-width: 400px;*/
+            /*            min-width: 400px;*/
             width: 90%;
             border-radius: 1%;
             margin: 20px auto;
-/*            margin-left: 0.52vw;*/
+            /*            margin-left: 0.52vw;*/
             /*display: block;*/
             /*border:1px solid #A0A0A0;*/
         }
-        
+
         #outside {
             display: none;
         }
