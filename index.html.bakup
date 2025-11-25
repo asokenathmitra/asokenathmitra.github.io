@@ -1,0 +1,352 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="RRDycooxGDNvHkUk-RWE5Uu1swXVb-eHxQMmh3c1gWA" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A. N. Mitra Memorial Lecture Series</title>
+  <link rel="stylesheet" href="./static/css/navbar.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/footer.css">
+  <script src="./static/js/navbarScript.js"></script>
+</head>
+<body>
+    <div class="bg-color-layer"></div>
+    <div class="background"></div>
+    
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="./index.html">Home</a>
+            <a href="./templates/about.html">Prof. A. N. Mitra</a>
+            <a href="./index.html#!" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./templates/schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./templates/schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./templates/WittenLecture.html">Ed Witten's Lecture</a>
+            </div>
+            <a href="./templates/attendees.html">Attendees</a>
+            <a href="./templates/regForm.html">Register</a>
+        </div>
+        <a href="./index.html#!" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="./index.html" class="nav-item">Home</a>
+            <a href="./templates/about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./templates/schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./templates/schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                    <a href="./templates/WittenLecture.html">Ed Witten's Lecture</a>
+                </div>
+            </div>
+            <a href="./templates/attendees.html" class="nav-item">Attendees</a>
+            <a href="./templates/regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <div style="margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));"></div>
+    <!-- <div style="padding-top: 60px;"></div> -->
+
+    <div class="hero anmitra">
+        <!-- <div class="hero-image"> -->
+            <!-- <img src="{% static 'images/anmitra2.png' %}" alt="Prof. A. N. Mitra"> -->
+            <!-- <img src="/anmitra.png"  -->
+        <!-- </div> -->
+        <!-- <div class="circle">
+            <img src="{% static 'images/anmitra.png' %}" alt="Prof. A. N. Mitra">
+        </div> -->
+        <div class="biggerContainer">
+            <!-- <div style="width: 40vw;">
+                <img src="{% static 'images/anmitra.png' %}" alt="Prof. A. N. Mitra">
+            </div> -->
+
+            <div id="fillerbox">
+                <!-- &nbsp; -->
+            </div>
+
+            <div class="hero-text">
+                <div style="height: 4vw; aspect-ratio: 1;"></div>
+                <h1>A. N. Mitra Memorial <br> Meeting and Lecture</h1>
+                <!-- <h1>Asoke Nath Mitra <br>Memorial Meeting and Lecture</h1> -->
+                <div style="height: 1.5vw;"></div>
+
+                <p id="about-anmseries">In the loving memory of and as a tribute to the life and work of Prof. Asoke Nath Mitra, we are organizing this meeting and the second memorial lecture. Prof. Mitra's contributions to the field of High Energy and Nuclear Physics are recognised widely around the world and have inspired many generations of physicists.</p>
+
+                <div style="height: 3.5vw;"></div>
+                <!-- <p id="date-event">April 14-15, 2025</p> -->
+                <p id="date-event">April 14<sup>th</sup>-15<sup>th</sup>, 2025</p>
+                <div style="width: 10vw;; display: inline-flex;"></div>
+                <div class="buttons">
+                    <a href="./templates/schedule.html" class="type2">Meeting</a>
+                    <a href="./templates/WittenLecture.html" class="type2">Lecture</a>
+                </div>
+                <div style="height: 2vw;"></div>
+            </div>
+        </div>
+
+            
+    </div>
+
+    <!-- To ensure proper gap between the above and below containers -->
+    <div> &nbsp;</div> 
+
+
+    <div class="hero witten">
+        <div class="hero-text" style="color: white; vertical-align: top;">
+            <!-- <h1 style="color: rgb(233, 190, 0); font-weight: lighter;"> 2<sup>nd</sup> A. N. Mitra Memorial Lecture</h1> -->
+            <h1 style="color: rgb(233, 190, 0); font-weight: lighter; margin-bottom: 0; padding-bottom: 0;"> Edward Witten </h1> <h1 style="padding-top: 0; font-size: max(3vw, 20px); margin-top: 0; color: white">A. N. Mitra Memorial Lecture</h1>
+            <p id="about-lecture" style="color: rgb(255, 249, 199);">This memorial lecture will be delivered by Professor Edward Witten on the topic "Algebras in Field Theory and Gravity: An Overview". This is the second A. N. Mitra memorial lecture. The <a href="https://www.youtube.com/watch?v=4kn6BwdyA14">inaugural memorial lecture</a> was given by Prof. N. Panchapakesan on Apr 17, 2023, and was organized by the Department of Physics, University of Delhi.</p>
+
+            <div class="buttons" id="learn-more-lec-button">
+                <a href="./templates/WittenLecture.html" style="margin-top: 3vw; color: #ff3864;" class="type2">Learn More</a>
+                <!-- <a href="/lecture" class="type1">Lecture</a> -->
+            </div>
+
+            <div class="circleWitten" id="inside">
+                <a href="./templates/WittenLecture.html" title="Designed by Gayatri Misra"><img src="./static/images/lecturePoster.jpeg" alt="Designed by Gayatri Misra"></a>
+            </div>
+        </div>
+        <div class="circleWitten" id="outside">
+            <a href="./templates/WittenLecture.html" title="Designed by Gayatri Misra"><img src="./static/images/lecturePoster.jpeg" alt="Designed by Gayatri Misra"></a>
+        </div>
+    </div>
+
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;"> aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+                <!-- <div class="footer-bottom-links">
+                    <a href="templates/about.html">About</a>
+                    <a href="templates/schedule.html">Events</a>
+                    <a href="templates/attendees.html">Attendees</a>
+                    <a href="templates/regForm.html">Register</a>
+                </div> -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Lecture</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/WittenLecture.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/navbarScript.js"></script>
+    <script src="../static/js/about.js"></script>
+    <style type="text/css">
+        
+    svg {
+      position: absolute;
+    }
+    .string {
+      fill: none;
+      stroke: greenyellow;
+/*      stroke: tomato;*/
+      stroke-width: 5;
+    }
+    </style>
+</head>
+<body>
+    <!-- Loading animation -->
+    <div id="loading">
+        <img src="../static/gifs/3bodyAnim.gif" alt="Loadidfsng...">
+    </div>
+
+    <div class="background the-page"></div>
+
+
+    <!-- Navigation bar -->
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="/2025/index.html">2025</a>
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./templates/schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./templates/schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./templates/GeraldHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                <a href="./templates/RobertWaldLecture.html">Robert Wald's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./regForm.html">Register</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <a href="/2025/index.html">2025</a>
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./templates/schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./templates/schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./templates/GeraldHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                <a href="./templates/RobertWaldLecture.html">Robert Wald's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <!-- <div class="strings-bg" style="width: 100vw; height: 100vh; z-index: 0;">
+        <svg width="min(400px, 100%)" height="min(400px, 100%)">
+            <path id="loop" class="string"/>
+        </svg>
+    </div> -->
+
+    <div class="hero">
+        <div class="Witten" style="background: transparent;">
+            <img src="../static/images/EdWitten.jpg" alt="Professor Edward Witten">
+            
+            <!-- horizontal line with red color -->
+            <hr id=witten-line> <!--old-->
+
+            <div id="date-time-lecture">
+                <h4 style="margin-left: 0px; color: white; display: inline;">Date & Time:</h4>
+                <p style="color: white; display: inline;">15<sup>th</sup> April 2026, 6:30 PM IST</p>
+            </div>
+            
+
+        </div>
+        <div class="hero-text" style="color: white;">
+            <!-- <h3 style="color: #fff;">A Background - Independent Algebra For Gravity</h3> -->
+            <!-- <h3 style="color: #fff;">Algebras in Field Theory and Gravity: An Overview</h3> -->
+            <h3 style="color: #fff;">XXXXXXX</h3>
+
+            <div id="author-name">Gerardus 't Hooft</div>
+            <!-- <pre style="margin-top: -20px; font-size: 20px;">Edward Witten</pre> -->
+
+            <!-- horizontal line with red color -->
+            <hr style="width: 100%; margin-top: 10px; margin-bottom: 10px; border: 1px solid purple;"> <!-- new -->
+            <!-- <hr style="width: 100%; margin-top: 10px; margin-bottom: 10px; border: 1px solid #fb4e2f;"> --> <!-- old -->
+
+            <h4>About the speaker</h4>
+            <!-- in about 500 words -->
+            <p>Gerardus 't Hooft is a Dutch theoretical physicist and professor emeritus at Utrecht University, the Netherlands.[1] He shared the 1999 Nobel Prize in Physics with his thesis advisor Martinus J. G. Veltman "for elucidating the quantum structure of electroweak interactions."
+                His work concentrates on gauge theory, black holes, quantum gravity and fundamental aspects of quantum mechanics. His contributions to physics include: a proof that gauge theories are renormalizable; dimensional regularization; and the holographic principle. </p>
+            <h4>Abstract</h4>
+            <!-- <p>In this lecture, I will discuss recent progress in the development of a background-independent formulation of algebraic gravity. This approach is based on the idea of using algebraic structures to describe the geometry of spacetime without reference to a fixed background metric. I will explain how this framework can be used to study the dynamics of gravitational fields and the structure of spacetime at the quantum level. I will also discuss the implications of this work for our understanding of the nature of gravity and the fundamental structure of the universe.</p> -->
+            <blockquote>
+                <br style="height: 0px;">""A man who knows everything”. This, reportedly, was my reply to a school teacher asking me what I’d like to become when I grow up. I was eight years old, or thereabouts, and what I wanted to say was “professor”, but, still not knowing everything, I had forgotten that word. And what I really meant was “scientist”, someone who unravels the secrets of the fundamental Laws of Nature."<br> <br>
+            <!-- <blockquote>
+                <br style="height: 0px;"> I will discuss general properties of the algebra of the observables in a region or accessible to an observer in ordinary quantum field theory and in the presence of gravity. <br><br>
+            </blockquote> -->
+
+
+
+            <!-- <p>To be announced </p> -->
+            <!-- <h4>Date & Time</h4>
+            <p>15<sup>th</sup> April 2025, 6:30 PM IST</p> -->
+            
+        </div>
+    </div>
+
+    
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;"> aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const pi = Math.PI
+        const path = document.getElementById("loop");
+        const cx = 200, cy = 200, r = 100; // Center and radius
+        const amplitude = r/8; // Wiggle amplitude
+        let t = 0;
+
+        function waveLoop(ampList, wavelengthList, frequencyList) {
+          const newPath = Array.from({ length: 360 }, (_, i) => {
+            const angle = (i * Math.PI) / 180;
+            // const wiggle = amplitude * Math.sin(frequency * t + angle);
+
+            let wiggle_ = 0;
+            for (var m = ampList.length - 1; m >= 0; m--) {
+              a = ampList[m];
+              w = frequencyList[m];
+              k = wavelengthList[m];
+              wiggle_ = wiggle_ + a*Math.sin(k*angle-w*t);
+            };
+
+            const wiggle = amplitude * wiggle_;
+            // console.log('Wiggle1', wiggle1)
+
+            // const wiggle = amplitude * (
+            //   Math.sin(angle) -
+            //   1*Math.sin(2*angle-t) + 
+            //   0.25*Math.sin(3*angle-3*t) -
+            //   0.5*Math.sin(5*angle));
+            // console.log('wiggle2', wiggle);
+            
+            const x = cx + (r + wiggle) * Math.cos(angle);
+            const y = cy + (r + wiggle) * Math.sin(angle);
+            return `${i === 0 ? "M" : "L"} ${x} ${y}`;
+          }).join(" ") + " Z"; // Close the loop
+
+          path.setAttribute("d", newPath);
+          t += 0.05; // Increment time for continuous wiggling
+          requestAnimationFrame(() => waveLoop(ampList, wavelengthList, frequencyList));
+        }
+        console.log([1,2,3]);
+        let loopList = [
+            [[1,-0.8,0.25,-0.5], [1,2,3,5], [0,1,3,0]],
+
+        ];
+
+        for (var loopId = loopList.length - 1; loopId >= 0; loopId--) {
+            waveLoop(loopList[loopId][0], loopList[loopId][1], loopList[loopId][2]);
+            
+        };
+        // waveLoop([1,-0.8,0.25,-0.5], [1,2,3,5], [0,1,3,0]);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,374 @@
+        body {
+            font-family: "Krub";
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            height: 100%;
+        }
+
+        .bg-image-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("../images/bgFinal.jpg");
+            background-attachment: fixed;
+            /*background-color: #f5f5f5;*/
+            background-size: cover;
+            background-position: center;
+            filter: blur(calc(2px));
+            opacity: 0.75;
+            z-index: -100;
+            /*transform: translateZ(-1px) scale(2);*/
+        }
+
+        .bg-color-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(133, 91, 13, 0.375);
+            /* #624664; /* #A0A0A0*/
+            background-size: cover;
+            background-position: center;
+            /*opacity: 0.4;*/
+            z-index: -10;
+            margin: 0px;
+            padding: 0px;
+            /*transform: translateZ(-1px) scale(2);*/
+        }
+
+        .main-container {
+            margin: calc(2.36vw + 9.28vh) auto;
+            /* auto makes this section center aligned (horizontally)*/
+            width: 50%;
+        }
+
+        .header {
+            padding: 2.5vh 1.5vw;
+            margin: 0 auto;
+            background-color: #4d6f69dd;
+            border-radius: 30px;
+            opacity: 1;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+        }
+
+        .title {
+            font-family: "Lora";
+            color: rgb(233, 190, 0);
+            font-size: calc(2.25rem + 1.5625vw);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .day-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 2vh 0;
+            margin: 0 auto;
+            font-family: "Krub";
+        }
+
+        .day-links a {
+            text-align: center;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 1vh 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: rgb(0, 190, 181);
+            color: black;
+        }
+
+        .day-links a:hover {
+            background-color: #ffffff;
+            color: #da4968;
+        }
+
+        .day-btn {
+            background-color: #e7f3ff;
+            color: #007bff;
+        }
+
+        .day-btn.active {
+            background-color: #ffffff;
+            color: #da4968;
+        }
+
+        .day-btn.active:hover {
+            background-color: #ffffff;
+            color: #da4968;
+        }
+
+        .cards {
+            display: grid;
+            width: 105.55%;
+            grid-auto-columns: 100%;
+            grid-column-gap: 100vw;
+            grid-auto-flow: column;
+            padding: 25px 0px;
+            margin: 0 0 0 -2.778%;
+            list-style: none;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            width: 94.737%;
+            margin: 1rem auto;
+            padding: 2rem 0;
+            background-color: #4d6f69dd;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+            scroll-snap-align: center;
+            transition: all 0.5s;
+        }
+
+        .card {
+            background-color: rgb(5, 100, 95);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 75%;
+            /*max-width: 600px;*/
+            margin: 20px auto;
+            word-wrap: break-word;
+            padding: 20px;
+            opacity: 1;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .card p {
+            color: rgb(255, 249, 199);
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .speaker a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: rgb(241, 205, 0);
+            transition: all 0.2s;
+        }
+
+
+        .speaker a:hover {
+            color: #007bff;
+        }
+
+        .speaker a:active {
+            color: #ff0000;
+        }
+
+        .links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .links a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .links .meeting {
+            background-color: #e7f3ff;
+            color: #007bff;
+        }
+
+        .links .meeting:hover {
+            background-color: #ffffff;
+            color: #da4968;
+        }
+
+        .links .lecture {
+            background-color: #eaffea;
+            color: #2eb82e;
+        }
+
+        .links .lecture:hover {
+            background-color: #ffffff;
+            color: #da4968;
+        }
+
+        .links .youtube {
+            background-color: #ffeaea;
+            color: #e63946;
+        }
+
+        .links .youtube:hover {
+            background-color: #ffffff;
+            color: #da4968;
+        }
+
+        .abstract {
+            margin-top: 15px;
+            display: none;
+        }
+
+        .abstract p {
+            display: none;
+            color: #333;
+        }
+
+        .abstract button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .abstract button:hover {
+            background-color: #0056b3;
+        }
+
+        .card.schedule-header {
+            background-color: rgb(90, 90, 90);
+        }
+
+        .card.schedule-header .date {
+            font-family: "Lora";
+            font-size: calc(1.5rem + 1.042vw);
+            text-align: center;
+            color: rgb(233, 190, 0);
+        }
+
+        .card.schedule-header .time-range {
+            font-family: "Lora";
+            font-size: calc(1.2rem + 0.834vw);
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        .card.interval {
+            font-family: "Krub";
+            font-size: calc(0.5*(2.25rem + 1.5625vw));
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background-color: rgb(90, 90, 90);
+        }
+
+        .card.chair {
+            font-family: "Krub";
+            font-size: calc(0.5*(2.25rem + 1.5625vw));
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background-color: rgb(90, 90, 90);
+        }
+
+        .card.chair a {
+            text-decoration: none;
+            color: rgb(241, 205, 0);
+            transition: all 0.2s;
+        }
+
+        .card.chair a:hover {
+            color: #007bff;
+        }
+
+        .card.chair a:active {
+            color: #ff0000;
+        }
+
+        .card#Reminiscences,
+        .card#Witten {
+            filter: drop-shadow(0rem 0rem 20px rgb(233, 190, 0));
+            /* filter: drop-shadow(0rem 0rem 20px #da4968); */
+        }
+
+        .card#Reminiscences p,
+        .card#Witten p {
+            font-size: 1rem;
+            /* filter: drop-shadow(0rem 0rem 20px #da4968); */
+        }
+
+        #remtit {
+            font-size: 0.8rem;
+            color: hotpink;
+        }
+
+
+        #remtit strong {
+            font-size: 1.00rem;
+            color: rgb(255, 249, 199);
+        }
+
+        .card#Witten {
+            filter: drop-shadow(0rem 0rem 20px rgb(233, 190, 0));
+            /* filter: drop-shadow(0rem 0rem 20px #da4968); */
+        }
+
+        .card#Witten a#wittit {
+            text-decoration: none;
+            color: hotpink;
+            transition: all 0.2s;
+        }
+
+        .card#Witten a#wittit:hover {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+
+        .card p#rem-time {
+            text-decoration: none;
+            font-size: 1em;
+            color: rgb(255, 255, 255);
+            transition: all 0.2s;
+        }
+
+        .speaker a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: rgb(241, 205, 0);
+            transition: all 0.2s;
+        }
+
+        .card .speaker .cancelled a {
+            font-size: 1.5em;
+            color: rgb(150, 125, 44);
+        }
+
+
+        @media only screen and (max-device-width: 600px) {
+            .bg-image-layer {
+                background-attachment: scroll;
+            }
+
+            .main-container {
+                width: 90%;
+            }
+
+            .card {
+                width: 70%;
+            }
+
+        }

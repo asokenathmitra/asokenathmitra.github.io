@@ -1,0 +1,313 @@
+/* Loading Animation Styles */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Hide content initially */
+.the-page {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    height: 100vh;
+    padding: 0;
+/*    padding-top: 60px;*/
+/*    background: linear-gradient(135deg, #000000, #434343);*/
+    background: black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.background {
+    background-color: linear-gradient(135deg, #000000, #434343);
+    position: fixed; /* Ensures it stays behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.55; /*0.15*/
+    filter: blur(2px);
+    z-index: -1; /* Places it behind other content */
+}
+
+/*.container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+*/
+
+/* Hero text */
+    .hero {
+        display: flex;
+/*        border-radius: 30px;*/
+        justify-content: space-between;
+        align-items: center;
+/*        padding: 30px; */
+/*        margin: 60px 100px 20px 100px; */
+        margin: auto;
+        margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));
+/*        margin-bottom: 30px;*/
+        width: 55%;
+        color: black;
+        background: rgba(0, 0, 0, 0.5);
+        flex-direction: column; /*expt*/
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        font-size: max(3.76vw, 30px); /*72px;*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+    .hero-text h2 {
+        font-size: max(3.14vw, 26px); /*60px*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+    .hero-text h3 {
+        font-size: max(1.67vw, 20px); /*32px*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+
+    .hero-text h4 {
+        font-size: max(1.23vw, 16px); /*24*/
+        font-family: "Lora";
+        font-weight: normal;
+    }
+
+    .Witten h1 {
+        font-size: max(3.27vw, 30px); /*72px;*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+    .Witten h2 {
+        font-size: max(3.14vw, 26px); /*60px*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+    .Witten h3 {
+        font-size: max(1.67vw, 20px); /*32px*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+
+    .Witten h4 {
+        font-size: max(1.23vw, 16px); /*24*/
+        font-family: "Lora";
+        font-weight: normal;
+        margin: 25px;
+    }
+
+    .Witten p {
+        /*margin-bottom: 20px;*/
+        font-family: "Krub";
+        font-size: max(0.94vw, 12px); /*18px*/
+        margin: 0px
+        /*text-align: right;*/
+    }
+
+    .hero-text p {
+        /*margin-bottom: 20px;*/
+        font-family: "Krub";
+        font-size: max(0.94vw, 12px); /*18px*/
+        /*text-align: right;*/
+    }
+
+    .hero-text .buttons {
+        display: flex;
+        gap: 15px;
+        border-color: black;
+        border-width: 5px;
+        justify-content: flex-start;
+    }
+
+    .hero-text .buttons a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-family: "Krub";
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    .hero-text .buttons .register {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .hero-text .buttons .learn-more {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        color: #333;
+    }
+
+    .hero-image {
+        /*max-width: 40%;*/ /*40*/
+        padding: 25px;
+        padding-left: 0px;
+        padding-right: 50px;
+    }
+
+    .hero-image img {
+        width: max(35vw, 400px);
+        border-radius: 500px; /*30px*/
+/*        background-image: radial-gradient(circle 50vh at 50% 100%, #a0a0a0, #a0a0a0);*/
+        border: 10px solid #333;
+        box-shadow: 0px 0px 5rem #ab9b82, inset 0px 0px 5rem #ab9b82;
+        opacity: 0.75;
+
+    }
+
+    /* Professor Witten */
+        .Witten {
+            /*border-radius: 100%;*/
+            display: flex;
+            flex-direction: column;
+/*            width: 100%;*/ /*old*/
+            width: 100%; /*expt*/
+/*            display: inline-block;*/
+            position: relative;
+            align-items: center;
+        }
+
+        .Witten img {
+/*            width: max(35vw, 300px);*/ /*old*/
+            width: 100%; /*expt*/
+/*            border-radius: 5%;*/
+/*            margin-left: 10kiiiii889px;*/
+            /*display: block;*/
+            /*border:1px solid #A0A0A0;*/
+        }
+
+        #author-name {
+            font-family: monospace;
+            margin-top: -20px; 
+            font-size: max(0.91vw, 14px);
+        }
+        
+        #witten-line {
+/*            width: max(35vw, 300px);*/ /*old*/
+            width: 100%; /*expt*/
+            align-content: flex-start;
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            border: 1px solid #fb4e2f;
+        }
+
+        #date-time-lecture {
+/*            width: max(35vw, 300px);*/ /*old*/
+            width: 100%; /*expt*/
+            display: inline-flex; 
+            align-items: center; 
+            margin-left: 0px;
+        }
+
+.content {
+    padding: 2rem;
+    padding-top: 6rem;
+/*    background: #fff;*/
+    margin-top: 20px;
+/*    text-align: center;*/
+}
+.content h2 {
+    font-family: "Lora";
+    font-size: 3em;
+    color: #333;
+/*    text-align: center;*/
+}
+.content p {
+    font-family: "Krub";
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+q,
+blockquote {
+  quotes: "“" "”" "‘" "’";
+/*  font-style: italic;*/
+}
+
+.french {
+  quotes: "«" "»" "‹" "›";
+}
+
+q:before,
+blockquote:before {
+  content: open-quote;
+}
+
+q:after,
+blockquote:after {
+  content: close-quote;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  color: purple;
+  font-size: 3em;
+}
+
+blockquote {
+    width: 90%;
+    margin-left: 0;
+    margin: 10px auto;
+    margin-left: 0px; /*expt*/
+    padding-left: 1em;
+    border-left: 5px solid purple;
+    font-family: "Krub";
+    font-size: max(0.94vw, 12px);
+}
+
+
+/*Responsive dsesign*/
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            margin-top: 75px;
+            width: 85%;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .hero-text {
+            max-width: 100%;
+        }
+    }

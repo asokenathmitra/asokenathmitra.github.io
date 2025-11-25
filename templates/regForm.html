@@ -1,0 +1,206 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+
+<!DOCTYPE html>
+<html lang="en">navbar
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/regForm.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/navbarScript.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="../2025/index.html">2025</a>
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./regForm.html">Register</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn">Editions ▾</div>
+                <div class="dropdown-content">
+                    <a href="../2025/index.html"> 2025 (Edition 1) </a>
+                    <a href="../index.html"> 2026 (Edition 2) </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                    <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                    <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+                    <a href="./PranNathLecture.html">Pran Nath's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+    <div class="background"></div>
+    <form id="registrationForm" method="post"
+        action="https://script.google.com/macros/s/AKfycbw5Z1HwkgvZKqJhPE9Wt40DJmTdRwwfZhjxkvCvQ2GGysAfHHwURctSVieWevfguJzdIA/exec">
+
+        <h1>A. N. Mitra Lecture Series Registration</h1>
+        <!-- <center><h3>(Lecture by Prof. Edward Witten)</h3></center> -->
+        <!-- <br><br> -->
+
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="position">Position *</label>
+            <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="postdoc">Postdoc</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="otherPosition" name="otherPosition" placeholder="Please specify"
+                class="other-input hidden">
+        </div>
+
+        <div class="form-group">
+            <label for="institute">Institute *</label>
+            <input type="text" id="institute" name="institute" required>
+        </div>
+
+        <div class="form-group">
+            <label for="source">How did you come to know about the lecture series?</label>
+            <select id="source" name="source">
+                <option value="">Select Source</option>
+                <option value="teachers">Teachers</option>
+                <option value="friends">Friends</option>
+                <option value="institute">Institute</option>
+                <option value="social">Social Media</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="otherSource" name="otherSource" placeholder="Please specify"
+                class="other-input hidden">
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments/Suggestions</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <button type="submit" id="submitbutton" class="submit-btn">Register</button>
+    </form>
+
+    <!-- Submitting animation -->
+    <div id="submitting">
+        <img src="../static/gifs/3bodyAnim.gif" alt="submeeting...">
+    </div>
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving
+                    memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;">
+                        aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+                <!-- <div class="footer-bottom-links">
+                    <a href="templates/about.html">About</a>
+                    <a href="templates/schedule.html">Events</a>
+                    <a href="templates/attendees.html">Attendees</a>
+                    <a href="templates/regForm.html">Register</a>
+                </div> -->
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Gather form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            document.getElementById('submitbutton').disabled = true;
+            document.getElementById('submitting').style.display = 'flex';
+
+            console.log("disabled");
+
+            try {
+                // Send form data to the server
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    // Redirect to success page on successful submission
+                    window.location.href = './regSuccess.html';
+                } else {
+                    alert('Failed to submit the form. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+
+            document.getElementById('submitbutton').disabled = false;
+            document.getElementById('submitting').style.display = 'none';
+            console.log("enabled");
+        });
+
+        // Show/hide "Other" input fields based on selection
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function () {
+                const otherId = 'other' + this.id.charAt(0).toUpperCase() + this.id.slice(1);
+                const otherInput = document.getElementById(otherId);
+                if (otherInput) {
+                    otherInput.classList.toggle('hidden', this.value !== 'other');
+                    if (this.value === 'other') {
+                        otherInput.required = true;
+                    } else {
+                        otherInput.required = false;
+                    }
+                }
+            });
+        });
+    </script>

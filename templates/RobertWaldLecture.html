@@ -1,0 +1,225 @@
+<!-- BASE FILE PATH -->
+<!-- <base href="file:///run/media/shivam/DataDrive/IIT%20Roorkee/Aalok%20misra/Website/" /> -->
+<base href="{{site.baseurl}}" />
+<!-- BASE FILE PATH -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Lecture</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/WittenLecture.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/navbarScript.js"></script>
+    <script src="../static/js/about.js"></script>
+    <style type="text/css">
+        svg {
+            position: absolute;
+        }
+
+        .string {
+            fill: none;
+            stroke: greenyellow;
+            /*      stroke: tomato;*/
+            stroke-width: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading animation -->
+    <div id="loading">
+        <img src="../static/gifs/3bodyAnim.gif" alt="Loadidfsng...">
+    </div>
+
+    <div class="background the-page"></div>
+
+
+    <!-- Navigation bar -->
+    <div class="mobile-topnav">
+        <b class="mobile-nav-header">Menu</b>
+        <div id="mobile-myLinks">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">Prof. A. N. Mitra</a>
+            <a href="../2025/index.html">2025</a>
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-container">
+                <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+            </div>
+            <a href="./attendees.html">Attendees</a>
+            <a href="./regForm.html">Register</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">Prof. A. N. Mitra</a>
+
+        </div>
+        <!--<div class="logo">Logo</div> -->
+        <div class="nav-right">
+
+            <div class="dropdown">
+                <div class="dropbtn">Editions ▾</div>
+                <div class="dropdown-content">
+                    <a href="../2025/index.html"> 2025 (Edition 1) </a>
+                    <a href="../index.html"> 2026 (Edition 2) </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Schedule ▾</div>
+                <div class="dropdown-content">
+                    <a href="./schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
+                    <a href="./schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                    <a href="./GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                    <a href="./RobertWaldLecture.html">Robert Wald's Lecture</a>
+                    <a href="./PranNathLecture.html">Pran Nath's Lecture</a>
+                </div>
+            </div>
+            <a href="./attendees.html" class="nav-item">Attendees</a>
+            <a href="./regForm.html"> <button class="register-btn">Register</button></a>
+        </div>
+    </nav>
+
+    <!-- <div class="strings-bg" style="width: 100vw; height: 100vh; z-index: 0;">
+        <svg width="min(400px, 100%)" height="min(400px, 100%)">
+            <path id="loop" class="string"/>
+        </svg>
+    </div> -->
+
+    <div class="hero">
+        <div class="Witten" style="background: transparent;">
+            <img src="../static/images/wald.png" alt="Professor Edward Witten">
+
+            <!-- horizontal line with red color -->
+            <hr id=witten-line> <!--old-->
+
+            <div id="date-time-lecture">
+                <h4 style="margin-left: 0px; color: white; display: inline;">Date & Time:</h4>
+                <p style="color: white; display: inline;">15<sup>th</sup> April 2026, 6:30 PM IST</p>
+            </div>
+
+
+        </div>
+        <div class="hero-text" style="color: white;">
+            <!-- <h3 style="color: #fff;">A Background - Independent Algebra For Gravity</h3> -->
+            <!-- <h3 style="color: #fff;">Algebras in Field Theory and Gravity: An Overview</h3> -->
+            <h3 style="color: #fff;">XXXXXXX</h3>
+
+            <div id="author-name">Robert M. Wald</div>
+            <!-- <pre style="margin-top: -20px; font-size: 20px;">Edward Witten</pre> -->
+
+            <!-- horizontal line with red color -->
+            <hr style="width: 100%; margin-top: 10px; margin-bottom: 10px; border: 1px solid purple;"> <!-- new -->
+            <!-- <hr style="width: 100%; margin-top: 10px; margin-bottom: 10px; border: 1px solid #fb4e2f;"> -->
+            <!-- old -->
+
+            <h4>About the speaker</h4>
+            <!-- in about 500 words -->
+            <p>Robert M. Wald (born June 29, 1947 in New York City) is an American theoretical physicist and professor
+                at the University of Chicago. He studies general relativity, black holes, and quantum gravity and has
+                written textbooks on these subjects. In 1977, Wald published a popular-science book titled Space, Time,
+                and Gravity: The Theory of the Big Bang and Black Holes explaining Albert Einstein's general theory of
+                relativity, and its implications in cosmology and astrophysics.</p>
+            <h4>Abstract</h4>
+            <!-- <p>In this lecture, I will discuss recent progress in the development of a background-independent formulation of algebraic gravity. This approach is based on the idea of using algebraic structures to describe the geometry of spacetime without reference to a fixed background metric. I will explain how this framework can be used to study the dynamics of gravitational fields and the structure of spacetime at the quantum level. I will also discuss the implications of this work for our understanding of the nature of gravity and the fundamental structure of the universe.</p> -->
+            <blockquote>
+                <br style="height: 0px;">In the past few years, one of my main research efforts has concerned the
+                formulation of quantum field theory in the presence of gravity, i.e., quantum field theory in curved
+                spacetime. In this approach, gravity is treated classically, but all other fields are treated in accord
+                with the principles of quantum field theory. Some major issues of principle arise in the formulation of
+                this theory on account of the lack of Poincare symmetry and the absence of a preferred vacuum state, but
+                it has recently been shown that the theory can be formulated in a fully satisfactory manner. It is my
+                hope that this will provide important clues to the formulation of a fully quantum theory of gravity
+                itself.<br><br>
+                <!-- <blockquote>
+                <br style="height: 0px;"> I will discuss general properties of the algebra of the observables in a region or accessible to an observer in ordinary quantum field theory and in the presence of gravity. <br><br>
+            </blockquote> -->
+
+
+
+                <!-- <p>To be announced </p> -->
+                <!-- <h4>Date & Time</h4>
+            <p>15<sup>th</sup> April 2025, 6:30 PM IST</p> -->
+
+        </div>
+    </div>
+
+
+    <!-- Page Three: Join Section and Footer -->
+    <div id="page-three" class="page-section page-three">
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p title="Designed by Ayush Ashray Nishad, Rajnish Kumar Jha and Shivam Singh Aswal">In the loving
+                    memory of Professor Asoke Nath Mitra.</p>
+                <!-- email llink -->
+
+                <p>For queries, contact &nbsp;<a href="javascript:void(0);" style="color: cyan; text-decoration: none;">
+                        aalok.misra[at]ph[dot]iitr[dot]ac[dot]in</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const pi = Math.PI
+        const path = document.getElementById("loop");
+        const cx = 200, cy = 200, r = 100; // Center and radius
+        const amplitude = r / 8; // Wiggle amplitude
+        let t = 0;
+
+        function waveLoop(ampList, wavelengthList, frequencyList) {
+            const newPath = Array.from({length: 360}, (_, i) => {
+                const angle = (i * Math.PI) / 180;
+                // const wiggle = amplitude * Math.sin(frequency * t + angle);
+
+                let wiggle_ = 0;
+                for (var m = ampList.length - 1; m >= 0; m--) {
+                    a = ampList[m];
+                    w = frequencyList[m];
+                    k = wavelengthList[m];
+                    wiggle_ = wiggle_ + a * Math.sin(k * angle - w * t);
+                };
+
+                const wiggle = amplitude * wiggle_;
+                // console.log('Wiggle1', wiggle1)
+
+                // const wiggle = amplitude * (
+                //   Math.sin(angle) -
+                //   1*Math.sin(2*angle-t) + 
+                //   0.25*Math.sin(3*angle-3*t) -
+                //   0.5*Math.sin(5*angle));
+                // console.log('wiggle2', wiggle);
+
+                const x = cx + (r + wiggle) * Math.cos(angle);
+                const y = cy + (r + wiggle) * Math.sin(angle);
+                return `${i === 0 ? "M" : "L"} ${x} ${y}`;
+            }).join(" ") + " Z"; // Close the loop
+
+            path.setAttribute("d", newPath);
+            t += 0.05; // Increment time for continuous wiggling
+            requestAnimationFrame(() => waveLoop(ampList, wavelengthList, frequencyList));
+        }
+        console.log([1, 2, 3]);
+        let loopList = [
+            [[1, -0.8, 0.25, -0.5], [1, 2, 3, 5], [0, 1, 3, 0]],
+
+        ];
+
+        for (var loopId = loopList.length - 1; loopId >= 0; loopId--) {
+            waveLoop(loopList[loopId][0], loopList[loopId][1], loopList[loopId][2]);
+
+        };
+        // waveLoop([1,-0.8,0.25,-0.5], [1,2,3,5], [0,1,3,0]);
+    </script>
+</body>
+
+</html>

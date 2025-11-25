@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Open and Closed Strings</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .string {
+      position: absolute;
+      fill: none;
+      stroke: white;
+      stroke-width: 1.5;
+      opacity: 0.8;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-15px) translateX(15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background" id="background"></div>
+
+  <h1>Hello</h1>
+
+  <script>
+    const stringCount = 100; // Number of strings to generate
+    const background = document.getElementById("background");
+
+    function createString(type) {
+      const svgNS = "http://www.w3.org/2000/svg";
+      const svg = document.createElementNS(svgNS, "svg");
+      const path = document.createElementNS(svgNS, "path");
+
+      // Random size, position, and initial path
+      const width = Math.random() * 200 + 100; // Larger size
+      const height = Math.random() * 150 + 50; // Larger height for closed strings
+      const top = Math.random() * 100 + "%";
+      const left = Math.random() * 100 + "%";
+
+      // Generate random path for open or closed strings
+      const initialPath =
+        type === "open"
+          ? `M10,50 Q${25 + Math.random() * 20},${25 + Math.random() * 50} ${40 + Math.random() * 40},50 T${70 + Math.random() * 30},50` // Randomized length for open string
+          : `M50,${50 - height / 2} Q${50 + width / 2},50 ${50},${50 + height / 2} Q${50 - width / 2},50 50,${50 - height / 2} Z`; // Circular closed string
+
+      svg.setAttribute("class", "string");
+      svg.style.width = width + "px";
+      svg.style.height = height + "px";
+      svg.style.top = top;
+      svg.style.left = left;
+
+      path.setAttribute("d", initialPath);
+      svg.appendChild(path);
+      background.appendChild(svg);
+
+      return { path, type, width, height };
+    }
+
+    function animateWiggle(strings) {
+      strings.forEach(({ path, type, width, height }) => {
+        const amplitude = Math.random() * 20 + 10; // Random wiggle amplitude
+        const frequency = Math.random() * 0.001 + 0.005; // Random frequency
+        const phaseOffset = Math.random() * Math.PI * 2; // Random phase offset
+
+        let t = 0;
+        function wiggle() {
+          const controlPointY = 50 - amplitude * Math.sin(frequency * t + phaseOffset);
+
+          const newPath =
+            type === "open"
+              ? `M10,50 Q${25 + Math.random() * 20},${controlPointY} ${40 + Math.random() * 40},50 T${70 + Math.random() * 30},50`
+              : `M50,${50 - height / 2} Q${50 + width / 2},${50 - amplitude * Math.sin(frequency * t + phaseOffset)} ${50},${50 + height / 2} Q${50 - width / 2},${50 + amplitude * Math.sin(frequency * t + phaseOffset)} 50,${50 - height / 2} Z`;
+
+          path.setAttribute("d", newPath);
+          t += 0.1;
+          requestAnimationFrame(wiggle);
+        }
+        wiggle();
+      });
+    }
+
+    function populateStrings() {
+      const paths = [];
+      for (let i = 0; i < stringCount; i++) {
+        const type = Math.random() > 0.5 ? "open" : "closed"; // Randomly choose type
+        const string = createString(type);
+        paths.push(string);
+      }
+      animateWiggle(paths);
+    }
+
+    populateStrings();
+  </script>
+</body>
+</html>

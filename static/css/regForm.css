@@ -1,0 +1,205 @@
+* {
+/*    margin: 0;*/
+/*    padding: 0;*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(135deg, #000000 0%, #a6213e 100%); */
+/*    min-height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+    color: #333;
+}
+
+/* submitting Animation Styles */
+#submitting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.background {
+    position: fixed; /* Ensures it stays behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+/*    background-image: url("../gifs/bgEqGIF1_low.gif");*/
+    background-image: url("../images/bgFinal.jpg");
+/*    background-image: url("/static/images/bg1963paper.png");*/
+/*    transform: rotate(-0deg);*/
+/*    transform-origin: center;*/
+    opacity: 1; /*0.15*/
+/*    background-repeat: no-repeat;*/
+    background-size: cover;
+    background-position: top right;
+    filter: blur(3px);
+    z-index: -1; /* Places it behind other content */
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(133, 91, 13, 0.375); /* Adjust the color and opacity as needed */
+    z-index: -1;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #16213e;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #00dd00 0%, #008888 100%);
+}
+
+.back-to-home-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none;
+}
+
+.other-input {
+    margin-top: 10px;
+}
+
+/* Atom Animation Styles */
+.atom-animation {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: rotate 4s linear infinite;
+}
+
+.orbit-1 { width: 40px; height: 40px; animation-duration: 3s; }
+.orbit-2 { width: 60px; height: 60px; animation-duration: 4s; }
+.orbit-3 { width: 80px; height: 80px; animation-duration: 5s; }
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .atom-animation {
+        display: none;
+    }
+}
