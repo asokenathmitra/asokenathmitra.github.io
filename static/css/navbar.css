@@ -27,7 +27,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.67vw 0 1.00vw;
+    /* padding: 0 1.67vw 0 1.00vw; */
     background: #1C091D;
     /*#95A3B9*/
     /*background-image: url("/static/images/blackboardbg3.jpg");*/
