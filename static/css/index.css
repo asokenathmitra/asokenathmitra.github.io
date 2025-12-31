@@ -93,7 +93,8 @@
     #Few-Body-Container {
         display: flex;
         flex-direction: column;
-        font-size: max(2vw, 24px);
+        /* font-size: max(2vw, 24px); */
+        font-size: 2em;
         font-family: "Lora";
         font-weight: bolder;
         background-color:#4d6f69dd;
@@ -104,6 +105,10 @@
         margin: 3.14vw 5.23vw;
         /* color: black; */
         border-radius: 1.04vw;
+    }
+
+    h1#Few-Body-Container {
+        background: None;
     }
     #Few-Body-Physics-Session {
         display: flex;
@@ -396,7 +401,7 @@
     @media (max-width: 768px) {
         * {
             text-align: center;
-            /* font-size: 10px; */
+            font-size: 10px;
             font-family: Krub;
         }
 
@@ -447,8 +452,12 @@
             align-items: center;
         }
 
+        h1#Few-Body-Container {
+            background: None;
+            font-size: 24px;
+        }
+
         #Few-Body-Physics-Session {
-            font-size: 10px;
             flex-direction: column;
         }
 
