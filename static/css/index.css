@@ -90,24 +90,41 @@
         /*        flex-wrap: wrap;*/
     }
 
+    #Few-Body-Container {
+        display: flex;
+        flex-direction: column;
+        font-size: max(2vw, 24px);
+        font-family: "Lora";
+        font-weight: bolder;
+        background-color:#4d6f69dd;
+        /* opacity: 1; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        padding: 1vw 1vw;
+        margin: 3.14vw 5.23vw;
+        /* color: black; */
+        border-radius: 1.04vw;
+    }
     #Few-Body-Physics-Session {
         display: flex;
         /*height: 30vw;*/
         /*80vh*/
-        background-color:#4d6f69;
+        /* background-color:#4d6f69; */
         /* opacity: 1; */
         /* justify-content: space-between; */
-        align-items: center;
-        padding: 1.04vw 1.04vw;
-        margin: 3.14vw 5.23vw;
+        /* align-items: center; */
+        /* padding: 1.04vw 1.04vw; */
+        /* margin: 3.14vw 5.23vw; */
         /* color: black; */
         border-radius: 1.04vw;
-        flex-direction: column;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        /* flex-direction: column; */
         /* flex-wrap: wrap;*/ 
-        font-size: max(2vw, 24px);
+        /* font-size: max(2vw, 24px); */
         /*56*/
-        font-family: "Lora";
-        font-weight: bolder;
+        /* font-family: "Lora";
+        font-weight: bolder; */
         /* margin-bottom: 1.04vw; */
         /* padding-bottom: 1.31vw; */
         /* filter: drop-shadow(0rem 0rem 20px rgb(233, 190, 0)); */
@@ -213,7 +230,7 @@
 
     #learn-more-lec-button {
         order: 3;
-        width: 50%;
+        width: max(50%, 200px);
         align-items: center;
         padding: 0.52vw 1.04vw;
         border-radius: 200vw;
@@ -379,7 +396,7 @@
     @media (max-width: 768px) {
         * {
             text-align: center;
-            font-size: 10px;
+            /* font-size: 10px; */
             font-family: Krub;
         }
 
@@ -428,6 +445,11 @@
             flex-direction: column;
             /*            flex-wrap: wrap;*/
             align-items: center;
+        }
+
+        #Few-Body-Physics-Session {
+            font-size: 10px;
+            flex-direction: column;
         }
 
         #fillerbox-mobile {
