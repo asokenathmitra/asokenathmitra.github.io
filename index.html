@@ -22,28 +22,39 @@
     <div class="bg-color-layer"></div>
     <div class="background"></div>
 
+        <!-- Navbar -->
     <div class="mobile-topnav">
         <b class="mobile-nav-header">Menu</b>
         <div id="mobile-myLinks">
             <a href="./index.html">Home</a>
-            <a href="./templates/about.html">Prof. A. N. Mitra</a>
-            <a href="./2025/index.html">2025</a>
-            <a href="./index.html#!" class="mobile-dropdown-btn" onclick="mobile_dropdown_click()">Schedule ▾</a>
-            <div class="mobile-dropdown-container" id="mobile-drop-container">
+            <a href="./2025/about.html">Prof. A. N. Mitra</a>
+            <!-- <a href="../2025/index.html">2025</a> -->
+                
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_edition_click()">Editions ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-edition-container">
+                <a href="./2025/index.html"> 2025 (Edition 1) </a>
+                <a href="./index.html"> 2026 (Edition 2) </a>
+            </div>
+
+            <a href="javascript:void(0);" class="mobile-dropdown-btn" onclick="mobile_dropdown_schedule_click()">Schedule ▾</a>
+            <div class="mobile-dropdown-container" id="mobile-drop-schedule-container">
                 <a href="./templates/schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
                 <a href="./templates/schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
+                <a href="./templates/kievski.html">Alejandro Kievski's Lecture</a>
                 <a href="./templates/GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
                 <a href="./templates/RobertWaldLecture.html">Robert Wald's Lecture</a>
+                <a href="./templates/skibinsky.html">Roman Skibinsky's Lecture</a>
                 <a href="./templates/PranNathLecture.html">Pran Nath's Lecture</a>
                 <a href="./templates/kistryn.html">Stanisław Kistryn's Lecture</a>
             </div>
             <a href="./templates/attendees.html">Attendees</a>
             <a href="./templates/regForm.html">Register</a>
         </div>
-        <a href="./index.html#!" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
+        <a href="javascript:void(0);" class="mobile-icon" onclick="mobileHamBurgerToggle()">☰</a>
     </div>
 
     <nav class="navbar">
+
         <div class="nav-links">
             <a href="./index.html" class="nav-item">Home</a>
             <a href="./templates/about.html" class="nav-item">Prof. A. N. Mitra</a>
@@ -51,6 +62,7 @@
         </div>
         <!--<div class="logo">Logo</div> -->
         <div class="nav-right">
+
             <div class="dropdown">
                 <div class="dropbtn">Editions ▾</div>
                 <div class="dropdown-content">
@@ -63,12 +75,11 @@
                 <div class="dropdown-content">
                     <a href="./templates/schedule.html#day-1" onclick="goToCard(0)">Day 1</a>
                     <a href="./templates/schedule.html#day-2" onclick="goToCard(1)">Day 2</a>
-                    <a href="./templates/GerardHooftLecture.html">Gerardus 't Hooft's
-                        Lecture</a>
-                    <a href="./templates/RobertWaldLecture.html">Robert Wald's
-                        Lecture</a>
-                    <a href="./templates/PranNathLecture.html">Pran Nath's
-                        Lecture</a>
+                    <a href="./templates/kievski.html">Alejandro Kievski's Lecture</a>
+                    <a href="./templates/GerardHooftLecture.html">Gerardus 't Hooft's Lecture</a>
+                    <a href="./templates/RobertWaldLecture.html">Robert Wald's Lecture</a>
+                    <a href="./templates/skibinsky.html">Roman Skibinsky's Lecture</a>
+                    <a href="./templates/PranNathLecture.html">Pran Nath's Lecture</a>
                     <a href="./templates/kistryn.html">Stanisław Kistryn's Lecture</a>
                 </div>
             </div>
@@ -76,6 +87,7 @@
             <a href="./templates/regForm.html"> <button class="register-btn">Register</button></a>
         </div>
     </nav>
+
 
     <div class="master-container" style="margin-top: calc(1.75*((0.9rem + 0.28vw) + 2.9vh + 2.9vh));"></div>
     <!-- <div style="padding-top: 60px;"></div> -->
