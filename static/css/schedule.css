@@ -157,7 +157,8 @@
             color: #333;
         }
 
-        .card p {
+        .card p,
+        a {
             color: rgb(255, 249, 199);
             font-size: 0.9em;
             margin: 5px 0;
@@ -269,14 +270,21 @@
         }
 
         .card.schedule-header .session-name {
-            font-family: "Lora";
+            font-family: "lora";
             font-size: calc(1.0rem + 0.834vw);
             text-align: center;
             color: rgb(255, 190, 0);
         }
 
+        .card.schedule-header .chair {
+            font-family: "lora";
+            font-size: calc(0.8*(1.0rem + 0.834vw));
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
         .card.interval {
-            font-family: "Krub";
+            font-family: "krub";
             font-size: calc(0.5*(2.25rem + 1.5625vw));
             text-align: center;
             color: rgb(255, 255, 255);
