@@ -275,7 +275,7 @@
 
         .card.schedule-header .time-range {
             font-family: "Lora";
-            font-size: calc(1.2rem + 0.834vw);
+            font-size: calc(0.7rem + 0.834vw);
             text-align: center;
             color: rgb(255, 255, 255);
         }
