@@ -187,11 +187,13 @@
 }
 
 .mobile-topnav .mobile-dropdown-container {
+    /* height: 20px; */
     display: none;
     background-color: #262626;
 }
 
 .mobile-dropdown-container a {
+    height: 0px;
     font-size: 12px;
     padding-left: 30px;
 }
