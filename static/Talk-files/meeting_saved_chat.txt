@@ -1,0 +1,85 @@
+16:33:44 From N.Panchapakesan to Everyone:
+	Gargi, Nice tosee you all again
+16:33:53 From Aalok Misra to Everyone:
+	Welcome Professor 't Hooft.
+16:33:58 From Gargi to Everyone:
+	Reacted to "Gargi, Nice tosee yo..." with 😍
+16:34:07 From Gargi to Everyone:
+	Reacted to "Welcome Professor 't..." with 🙏
+16:34:10 From Vedant to Everyone:
+	Reacted to "Welcome Professor 't..." with 🙏
+16:34:55 From Shivam Singh Aswal to Everyone:
+	Reacted to Welcome Professor 't... with "❤️"
+16:35:00 From Shivam Singh Aswal to Everyone:
+	Reacted to Gargi, Nice tosee yo... with "❤️"
+16:35:06 From Shivam Singh Aswal to Everyone:
+	Removed a ❤️ reaction from "Gargi, Nice tosee yo..."
+16:50:22 From indranil mazumdar to Everyone:
+	Aalok I think we are not audible to him. That is what he said during Prof. Hari Dass"s talk
+16:50:46 From indranil mazumdar to Everyone:
+	I too faced the same problem for some minutes
+16:51:00 From Patrick Das Gupta to Everyone:
+	Please send a chat message to him.
+16:55:42 From indranil mazumdar to Everyone:
+	Can you send an email message?
+16:57:56 From Shivam Singh Aswal to Everyone:
+	We can hear you professor.
+16:59:00 From Anuradha Gupta to Everyone:
+	Tell him to start the talk. Mail him this message
+16:59:02 From indranil mazumdar to Everyone:
+	Write him that we can hear him.
+17:01:08 From indranil mazumdar to Everyone:
+	All of us can hear you Professor.
+17:01:26 From Nandini Das to Everyone:
+	We can hear you professor
+17:01:39 From Patrick Das Gupta to Everyone:
+	Please write to him that he can start the lecture.
+17:04:57 From Vedant to Roopa Pramodan _IIT Roorkee(direct message):
+	top right mai jo 3 dots hai usme present ka option aata hai wo kardo
+17:19:13 From Aalok Misra to Everyone:
+	As Prof. 't Hooft is unable to hear us, we will not be able to have a live QA session - if you wish you could type in your queries  here in the chat session, and I would email him later your queries.
+17:23:31 From Arnav Barbaad to Everyone:
+	^ Thank you for this Prof. (but how will we get his reply?)
+17:23:52 From Aalok Misra to Everyone:
+	I would forward his replies.
+17:24:07 From Arnav Barbaad to Everyone:
+	Reacted to I would forward his ... with "👍"
+17:42:27 From Aalok Misra to Everyone:
+	Replying to "As Prof. 't Hooft is..."
+	
+	Please add your email address and name, if you send in your query on the chat.
+18:12:17 From Arnav Barbaad to Everyone:
+	Prof. Hooft, thank you for the talk! 
+	
+	I wanted to ask what happens to Region IV in KS  coordinates you just showed? Does it not exist? 
+	
+	If the blackhole is a giant S-matrix between Region I and Region III directly, is there no interior? What does the infalling observer sees then?
+	----
+	I ask this because this conflicts with models like the planck star proposed by Prof. Rovelli in LQG, which says there is an interior, and the interior explodes like Region IV faster than Hawking Radiation radiates it away, thus there's no paradox.
+	
+	What do you feel about LQG and Prof. Rovelli's planck star bounce in general?
+	
+	-Arnav Ramkrishnan
+	arnavbarbaad@ucla.edu
+18:12:19 From Patrick Das Gupta to Everyone:
+	A  Very exciting and thought provoking lecture, Prof. `t Hooft.  Questions: 1. You mentioned that |psi> is well defined and exists in the region I of the Scwarzschild black hole, but <psi| does not. The later exists in the region II. Is this because when one applies the time reversal to the Schrodinger equation, t--> -t and  |psi> ---> <psi|  ? 2. In that case, is the density operator |psi><psi| not defined in the region II?  My email id: patrickdasgupta1@gmail.com
+18:12:22 From Aalok Misra to Everyone:
+	Thank you very much Professor 't Hooft for the lovely lecture. Wish there would have been no connectivity issues. Because of the latter, I have asked attendees to put their queries, if any, on the chat that I would email you as a single file requesting for your clarifications that I would forward, individually, to the various people.
+18:13:42 From Patrick Das Gupta to Everyone:
+	Thanks Prof. `t Hooft for the exciting lecture.
+18:14:43 From Ravi Rau to Everyone:
+	A caution regarding slide 23. Given an energy spectrum with say a very large number N of levels, the Darboux construction can make another potential with all but just one energy level preserved, that is, remove just one energy level. If N very large, it will be difficult to distinguish the two spectra  on the basis of some subset known. Note also that knowing just energy not enough because the two phase-equivalent potentials may have different wavefunctions even while having energy values same.    Ravi Rau.  ravirau@lsu.edu
+18:15:08 From N.Panchapakesan to Everyone:
+	I found I could download his earlier 2016 book QM free on my mobile
+18:15:59 From N.Panchapakesan to Everyone:
+	Not easy reading.
+18:19:43 From gerardthooft to Everyone:
+	the book is in two parts, the first should be (a bit) easier than the second
+18:21:38 From Shivam Singh Aswal to Everyone:
+	Reacted to "the book is in two..." with ❤️
+18:22:00 From Arnav Barbaad to Everyone:
+	Reacted to the book is in two p... with "❤️"
+18:22:09 From gerardthooft to Everyone:
+	That might depend on what you call energy
+18:26:44 From N.Panchapakesan to Everyone:
+	That is true, Quite a bit is exciting reading
